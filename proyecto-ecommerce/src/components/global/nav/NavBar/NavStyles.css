@@ -1,0 +1,32 @@
+/*header{
+    background-color: #700e0f;
+}*/
+
+nav ul li{
+    list-style:none;
+    padding-bottom: 5px;
+}
+
+li a{
+    font-family: 'Hind Guntur', sans-serif;
+    text-align: center;
+    color: black;
+    
+}
+li:hover{
+
+border-bottom: 2px solid #36486b;
+/*border-top: 2px solid #36486b;*/
+color: black;
+}
+a{
+    text-decoration: none;
+    
+}
+a:hover{
+    color: black;
+    
+}
+nav{
+    border-top: 2px solid #36486b;
+}
