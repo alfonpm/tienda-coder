@@ -5,12 +5,14 @@
 nav ul li{
     list-style:none;
     padding-bottom: 5px;
+    color: black !important;
+
 }
 
 li a{
     font-family: 'Hind Guntur', sans-serif;
     text-align: center;
-    color: black;
+    color: black !important;
     
 }
 li:hover{
@@ -21,6 +23,7 @@ color: black;
 }
 a{
     text-decoration: none;
+    color: black !important;
     
 }
 a:hover{
