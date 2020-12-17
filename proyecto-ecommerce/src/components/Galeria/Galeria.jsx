@@ -5,12 +5,12 @@ import Grilla from './Grilla'
 
 function Galeria() {
     return (
-        <section className="container">
-            <section className="row" id="contGalria">
-                <Grilla img={fotom} titulo="Mujer" descrip="Outfit" />
-                <Grilla img={fotoh} titulo="Hombre" descrip="Outfit" />
-                <Grilla img={foton} titulo="Niño" descrip="Outfit" />
-            </section>
+        <section className="container" id="galteria">
+            <div className="row" id="contGalria">
+                <Grilla img={fotom} titulo="Producto 1" precio="500" />
+                <Grilla img={fotoh} titulo="Producto 2" precio="600" />
+                <Grilla img={foton} titulo="Producto 3" precio="300" />
+            </div>
         </section>
     )
 
