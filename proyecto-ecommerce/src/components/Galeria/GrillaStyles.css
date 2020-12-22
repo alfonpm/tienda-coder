@@ -42,3 +42,7 @@ p{
     border-bottom: solid 2px rgb(180, 175, 175);
     font-family: 'Bebas Neue', cursive;
 }
+
+.cantidad{
+    padding: 5px;
+}
