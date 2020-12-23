@@ -1,0 +1,21 @@
+
+.ItemDetail_contDetallesProd{
+    
+    height: 50%;
+}
+.ItemDetail_Nombre, .ItemDetail_Precio,.ItemDetail_Descrip{
+    padding: 10px;
+    color: #36486b;
+}
+.ItemDetail_Nombre{
+border-bottom: solid 2px grey;
+
+}
+.ItemDetail_Precio{
+font-weight: bold;
+font-size: 20px;
+}
+.ItemDetail_Descrip{
+    font-family: 'Poppins', sans-serif;
+    padding: 10px;
+}

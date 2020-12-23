@@ -1,4 +1,4 @@
-import '../Galeria/GrillaStyles.css'
+import './GrillaStyles.css'
 import { useState } from 'react'
 
 

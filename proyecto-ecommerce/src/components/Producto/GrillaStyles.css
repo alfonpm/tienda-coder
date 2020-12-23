@@ -46,3 +46,8 @@ p{
 .cantidad{
     padding: 5px;
 }
+
+.mensaje{
+    text-align: center;
+    font-size: 20px;
+}
