@@ -31,7 +31,6 @@ const getProd = async () => {
         }
     }
     useEffect(() => {
-        //getProduct.then(resp => setItem(resp));
         getProd();
     }, []);
 
