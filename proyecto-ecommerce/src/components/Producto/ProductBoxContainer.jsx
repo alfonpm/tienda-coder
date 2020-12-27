@@ -2,10 +2,9 @@ import { useState, useEffect } from 'react';
 import mochila from '../../assets/mochila.jpeg'
 import campera from '../../assets/campera.jpg'
 import buzo from '../../assets/buzo.jpeg'
+import ProductBox from './ProductBox'
 
-import Grilla from './Grilla'
-
-function Galeria() {
+function ProductBoxContainer() {
     let [items, setItems] = useState([]);
     let prod = [
         {
@@ -14,7 +13,7 @@ function Galeria() {
             Talle: "",
             Color: "Mostaza",
             Precio: 500,
-            Foto:mochila
+            Foto: mochila
         },
         {
             Id: 2,
@@ -22,7 +21,7 @@ function Galeria() {
             Talle: "L",
             Color: "Marron",
             Precio: 600,
-            Foto:campera
+            Foto: campera
         },
         {
             Id: 2,
@@ -30,7 +29,7 @@ function Galeria() {
             Talle: "M",
             Color: "Azul",
             Precio: 500,
-            Foto:buzo
+            Foto: buzo
         }]
 
     const getProductos = new Promise((resolve, reject) => {
@@ -38,7 +37,7 @@ function Galeria() {
             resolve(prod);
         }, 2000)
     })
-  
+
 
     const getProds = async () => {
         try {
@@ -59,26 +58,22 @@ function Galeria() {
                 items.length ?
                     <>
                         <ul className="row" id="contGalria">
-
                             {
                                 items.map(item => (
-                                    
-                                    <Grilla  
-                                    img={item.Foto} 
-                                    titulo={item.Nombre} 
-                                    precio={item.Precio} 
+                                    <ProductBox
+                                        img={item.Foto}
+                                        titulo={item.Nombre}
+                                        precio={item.Precio}
                                     />
-                            
                                 ))
                             }
                         </ul>
-                    </>:
+                    </> :
                     <p className="mensaje">Cargando productos...</p>
-                        }
-
-            </section>
+            }
+        </section>
     )
 
 }
 
-export default Galeria;
+export default ProductBoxContainer;

@@ -1,0 +1,64 @@
+/*header{
+    background-color: #700e0f;
+}*/
+
+nav ul li{
+    list-style:none;
+
+
+}
+
+li a{
+    font-family: 'Hind Guntur', sans-serif;
+    text-align: center;
+    
+    
+}
+li:hover{
+/*border-bottom: 2px solid #36486b;
+border-top: 2px solid #36486b;*/
+color: black;
+}
+.nav-item, .menu-item{
+    text-decoration: none;
+    color: rgb(243, 223, 223) !important
+    
+}
+a:hover{
+    text-decoration: none;
+    color: black !important;
+    
+}
+nav{
+    align-items: center;
+}
+.menu_item{
+    position: relative;
+    color: white;
+}
+.icono{
+    color: white;
+}
+.icono:hover{
+    color: black;
+}
+.menu_item-span{
+    position: absolute;
+    bottom: 10px;
+    padding: 3px;
+}
+.main_nav{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 7px;
+}
+
+.cabezal{
+    background-color: #700e0f;
+    padding-bottom: auto;
+    padding-top: 10px;
+
+}
