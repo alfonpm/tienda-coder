@@ -1,5 +1,5 @@
 import './DetalleStyles.css'
-
+import ItemCount from '../ItemCount/ItemCount'
 
 function ItemDetail({ img, nombre, precio, descripcion }) {
     return (
@@ -12,6 +12,7 @@ function ItemDetail({ img, nombre, precio, descripcion }) {
                     <h1 className="ItemDetail_Nombre">{nombre}</h1>
                     <span className="ItemDetail_Precio">{precio}</span>
                     <p className="ItemDetail_Descrip">{descripcion}</p>
+                    <ItemCount/>
                 </div>
 
             </div>
