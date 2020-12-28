@@ -1,5 +1,5 @@
 import './ProductBoxStyles.css'
-
+import {Link} from 'react-router-dom'
 function ProductBox({ img, titulo, precio }) {
     return (
 
@@ -10,7 +10,7 @@ function ProductBox({ img, titulo, precio }) {
             <div className="text-center infoBox">
                 <h1>{titulo}</h1>
                 <p>{precio}</p>
-                <input type="button" className="ver" value="ver"/>
+                <Link to="/Detail" className="ver">ver</Link> 
             </div>
 
         </article>

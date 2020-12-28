@@ -1,8 +1,11 @@
-import 'WomanStylesContainer.css'
-
+import './WomanStylesContainer.css'
+import ProductBoxContainer from '../Producto/ProductBoxContainer'
 function WomanContainer(){
     return(
-        <p className="pMujer">Productos hombre</p>
+        <>
+        <p className="pMujer">Productos mujer</p>
+        <ProductBoxContainer/>
+        </>
     )
 }
 

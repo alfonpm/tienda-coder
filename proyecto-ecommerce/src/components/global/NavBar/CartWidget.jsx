@@ -3,10 +3,9 @@ import './NavStyles.css';
 
 const CartWidget = ()=>{
     return (
-        <a href="#">
-            
+        <>
             <BsFillBagFill className="icono"/>
-        </a>
+        </>
     )
 }
 
