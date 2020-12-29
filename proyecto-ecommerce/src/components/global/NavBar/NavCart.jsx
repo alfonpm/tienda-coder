@@ -5,7 +5,7 @@ const NavCart = ({action, cant}) => {
     return (
         <div className="navCart" onClick={action}>
             <BsFillBagFill />
-            <span>{cant}</span>
+            <span className="cant">{cant}</span>
         </div>
     )
 }

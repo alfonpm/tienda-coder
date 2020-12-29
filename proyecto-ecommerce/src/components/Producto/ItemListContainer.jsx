@@ -15,17 +15,20 @@ function ItemListContainer() {
     })
 
     const llamadoProductos = () => {
-        promesaProd.then(
-            (respuesta) => {
+        promesaProd.then((respuesta) => {
+            if(categ){
                 const prodCat = respuesta.filter(
                   (producto)=>  producto.Categoria === categ)
                 setProductos(prodCat)
+            } else{
+                setProductos(respuesta)
+            }
+                
             })
     }
 
     useEffect(
-        () => llamadoProductos(),
-        [categ]
+        () => llamadoProductos(), [categ]
     )
     return (
         <section className="container" id="ItemDetailContainer">
@@ -45,7 +48,6 @@ function ItemListContainer() {
                     </> :
                     <p className="mensaje">Cargando productos...</p>
             }
-
         </section>
     )
 }
