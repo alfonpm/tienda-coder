@@ -1,64 +1,44 @@
 import { useState, useEffect } from 'react';
-import campera from '../../../assets/campera.jpg'
 import './DetalleStyles.css'
 import ItemDetail from './ItemDetail'
+import {ListProducts} from '../ListProducts'
+import {useParams} from 'react-router-dom'
 
 function ItemDetailContainer() {
-    let [item, setItem] = useState([]);
-    const product = [
-        {
-            Id: 1,
-            Nombre: "Campera",
-            Talle: "L",
-            Color: "Marron",
-            Precio: "$600",
-            Foto: campera,
-            Descripcion: "La tela exterior es gabardina de algodón 100%. Tiene dos bolsillos trampa y dos bolsillos dobles. Puños elásticos internos en las mangas. Cordón de entalle en cintura y en el ruedo."
-        }
-    ]
+    const [producto, setProducto] = useState([]);
 
-    const getProduct = new Promise((resolve, reject) => {       
+    const {itemid} = useParams() 
+    console.log(itemid);
+
+    const promesaProducto = new Promise((resolve, reject) => {       
             setTimeout(() => {
-            resolve(product);
+            const prodSeleccionado = ListProducts.find(producto=> producto.Id==itemid)
+            resolve(prodSeleccionado);
         }, 2000)
     })
-const getProd = async () => {
-        try {
-            const resultado = await getProduct;
-            setItem(resultado);
-        } catch (error) {
-            alert('El producto no está disponible');
-        }
-    }
+const llamadoProducto = ()=>{
+    promesaProducto.then((respuesta)=> setProducto(respuesta))
+}
     useEffect(() => {
-        getProd();
+        llamadoProducto();
     }, []);
 
     
     return (
         <section className="container" id="ItemDetailContainer">
             {
-                item.length ?
-                    <>
+                producto ?
+                
                         <div className="container-fluid" id="ItemDetail">
-
                             {
-                                item.map(item => (
-
                                     <ItemDetail
-                                        img={item.Foto}
-                                        nombre={item.Nombre}
-                                        precio={item.Precio}
-                                        descripcion={item.Descripcion}
+                                        producto={producto}
                                     />
-
-                                ))
                             }
                         </div>
-                    </> :
-                    <p className="mensaje">Cargando detalles del producto...</p>
+                    :
+                    <p className="mensaje">No existe ese producto...</p>
             }
-
         </section>
     )
 

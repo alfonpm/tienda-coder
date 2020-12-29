@@ -3,10 +3,10 @@ import NavBar from '../NavBar/NavBar'
 import { Link } from 'react-router-dom'
 function Header() {
     return (
-        <header className="container-fluid cabezal">
+        <header className="container-fluid cabezal mb-5">
             <nav className="row">
 
-                <figure className="text-center d-none d-md-block col-md-4">
+                <figure className="text-center col-4 col-md-4">
                     <Link to="/"> <img src={logo} alt="logo" className="img-fluid "></img>
                     </Link> </figure>
                 <div className="col-12 col-md-8">

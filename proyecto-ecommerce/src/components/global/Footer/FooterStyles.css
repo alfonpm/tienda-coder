@@ -1,6 +1,10 @@
 Footer {
     background-color: #700e0f;
-    font-family: 'Hind Guntur', sans-serif;
     margin-top: auto;
-    height: 40px;
+    height: 50px;
+}
+.pFooter{
+    color: blanchedalmond;
+    padding-left: 30px;
+    letter-spacing: 2px;
 }

@@ -14,88 +14,70 @@ export const ListProducts = [
     {
         Id: 1,
             Nombre: "Camisa",
-            Talle: "L",
-            Color: "Rojo",
             Precio: "$500",
             Foto: h1,
             Categoria: "hombre",
             Descripcion: desc
     },
     {
-        Id: 1,
+        Id: 2,
             Nombre: "Camisa",
-            Talle: "L",
-            Color: "Azul",
             Precio: "$600",
             Foto: h2,
             Categoria: "hombre",
             Descripcion: desc
     },
     {
-        Id: 1,
+        Id: 3,
             Nombre: "Jean",
-            Talle: "L",
-            Color: "Azul",
             Precio: "$1000",
             Foto: h3,
             Categoria: "hombre",
             Descripcion: desc
     },
     {
-        Id: 1,
+        Id: 4,
             Nombre: "Camisa",
-            Talle: "L",
-            Color: "violeta",
             Precio: "$600",
             Foto: m1,
             Categoria: "mujer",
             Descripcion: desc
     },
     {
-        Id: 1,
+        Id: 5,
             Nombre: "Blusa",
-            Talle: "L",
-            Color: "Mostaza",
             Precio: "$300",
             Foto: m2,
             Categoria: "mujer",
             Descripcion: desc
     },
     {
-        Id: 1,
+        Id: 6,
             Nombre: "Jean",
-            Talle: "L",
-            Color: "Verde",
             Precio: "$700",
             Foto: m3,
             Categoria: "mujer",
             Descripcion: desc
     },
     {
-        Id: 1,
+        Id: 7,
             Nombre: "Bombacha de campo",
-            Talle: "L",
-            Color: "Azul",
             Precio: "$600",
             Foto: n1,
             Categoria: "nino",
             Descripcion: desc
     },
     {
-        Id: 1,
+        Id: 8,
             Nombre: "Campera",
-            Talle: "L",
-            Color: "Marron",
             Precio: "$1200",
             Foto: n2,
             Categoria: "nino",
             Descripcion: desc
     },
     {
-        Id: 1,
+        Id: 9,
             Nombre: "Camisa",
-            Talle: "L",
-            Color: "Blanca",
             Precio: "$400",
             Foto: n3,
             Categoria: "nino",
@@ -103,3 +85,4 @@ export const ListProducts = [
     },
 ]
 
+ 

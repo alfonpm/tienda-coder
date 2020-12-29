@@ -1,37 +1,27 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import './App.css';
 import Header from './components/global/header/Header'
-import Home from './components/Home/Home'
-import WomanContainer from './components/Woman/WomanContainer'
-import ManContainer from './components/Man/ManContainer'
-import ChildContainer from './components/Child/ChildContainer'
+import ItemDetailContainer from './components/Producto/Detalle/ItemDetailContainer'
 import Footer from './components/global/Footer/Footer'
 import CartContainer from './components/Cart/CartContainer'
-import Detail from './components/Producto/Detalle/ItemDetailContainer'
 import Error from './components/global/Error'
-
+import ItemListContainer from './components/Producto/ItemListContainer'
 function App() {
   return (
     <BrowserRouter>
       <Header />
       <Switch>
         <Route exact path="/">
-          <Home />
+          <ItemListContainer/>
         </Route>
-        <Route exact path="/WomanContainer">
-          <WomanContainer />
-        </Route>
-        <Route exact path="/ManContainer">
-          <ManContainer />
-        </Route>
-        <Route exact path="/ChildContainer">
-          <ChildContainer />
-        </Route>
-        <Route exact path="/CartContainer">
+        <Route exact path="/cart">
           <CartContainer />
         </Route>
-        <Route path="/detail">
-          <Detail />
+        <Route exact path="/categoria/:categ">
+        <ItemListContainer/>
+        </Route>
+        <Route path="/item/:itemid">
+          <ItemDetailContainer/>
         </Route>
         <Route path="*">
           <Error />

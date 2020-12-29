@@ -1,5 +1,7 @@
 .ErrorP{
     text-align: center;
-    font-size: 25px;
+    font-size: 30px;
     font-family: 'Hind Guntur', sans-serif;
+    min-height: 100vh;
+    padding-top: 20px;
 }
