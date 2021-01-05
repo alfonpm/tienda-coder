@@ -1,17 +1,16 @@
 import './ItemCountStyles.css'
-import {useState} from 'react';
+import { useState } from 'react';
+import { Redirect } from 'react-router-dom'
+
 function ItemCount() {
 
     const [cantidad, setcantidad] = useState(1);
     const stock = 5;
-
-    function OnAdd() {
-        if (cantidad == 1)
-            alert(`El producto se agregó correctamente`)
-        else
-            alert(`Se agregaron ${cantidad} productos al carrito`)
+    let [redirectOnClick, setredirectOnClick] = useState(false);
+    
+    function OnAdd(){
+        setredirectOnClick(redirectOnClick= true)
     }
-
     const Resta = () => {
         if (cantidad > 1) {
             setcantidad(cantidad - 1);
@@ -25,6 +24,9 @@ function ItemCount() {
             alert('No hay mas stock disponible')
         }
     }
+    if(redirectOnClick){
+        return <Redirect to="/cart"/>
+    }
 
     return (
         <div className="canti mx-auto">
@@ -35,7 +37,6 @@ function ItemCount() {
             <span className="cantProd text-center">{cantidad}</span>
             <input type="button" className="mas" value="+" onClick={Suma} />
             <input type="button" className="agregar" onClick={OnAdd} value="Agregar" />
-
         </div>
     )
 }
