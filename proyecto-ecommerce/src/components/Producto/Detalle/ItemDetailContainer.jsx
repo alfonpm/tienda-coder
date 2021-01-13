@@ -8,7 +8,7 @@ function ItemDetailContainer() {
     const [producto, setProducto] = useState([]);
 
     const {itemid} = useParams() 
-    console.log(itemid);
+    
 
     const promesaProducto = new Promise((resolve, reject) => {       
             setTimeout(() => {

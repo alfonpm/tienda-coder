@@ -6,8 +6,16 @@ import Footer from './components/global/Footer/Footer'
 import CartContainer from './components/Cart/CartContainer'
 import Error from './components/global/Error'
 import ItemListContainer from './components/Producto/ItemListContainer'
+import {Store} from './store'
+import { useState } from 'react';
+
 function App() {
+  const [data, setData] = useState({
+    items:[],
+    cantidad:0
+  });
   return (
+    <Store.Provider value={[data, setData]}>
     <BrowserRouter>
       <Header />
       <Switch>
@@ -29,6 +37,7 @@ function App() {
       </Switch>
       <Footer />
     </BrowserRouter>
+    </Store.Provider>
   );
 }
 

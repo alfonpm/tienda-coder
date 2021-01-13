@@ -1,6 +1,17 @@
 .cartP{
     text-align: center;
     font-size: 20px;
-    min-height: 100vh;
+    min-height: auto;
     padding-top: 20px;
+}
+
+.cartContenedor{
+    align-items: center;
+    text-align: center;
+}
+
+.cartP{
+    align-items: center;
+    text-align: center;
+    
 }

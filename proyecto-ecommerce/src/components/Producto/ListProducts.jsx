@@ -13,51 +13,57 @@ const desc = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusanda
 export const ListProducts = [
     {
         Id: 1,
-            Nombre: "Camisa",
+            Nombre: "Camisa roja",
             Precio: "$500",
             Foto: h1,
             Categoria: "hombre",
-            Descripcion: desc
+            Descripcion: desc,
+            qty:0
     },
     {
         Id: 2,
-            Nombre: "Camisa",
+            Nombre: "Camisa azul",
             Precio: "$600",
             Foto: h2,
             Categoria: "hombre",
-            Descripcion: desc
+            Descripcion: desc,
+            qty:0
     },
     {
         Id: 3,
-            Nombre: "Jean",
+            Nombre: "Jean azul",
             Precio: "$1000",
             Foto: h3,
             Categoria: "hombre",
-            Descripcion: desc
+            Descripcion: desc,
+            qty:0
     },
     {
         Id: 4,
-            Nombre: "Camisa",
+            Nombre: "Camisa violeta",
             Precio: "$600",
             Foto: m1,
             Categoria: "mujer",
-            Descripcion: desc
+            Descripcion: desc,
+            qty:0
     },
     {
         Id: 5,
-            Nombre: "Blusa",
+            Nombre: "Blusa mostaza",
             Precio: "$300",
             Foto: m2,
             Categoria: "mujer",
-            Descripcion: desc
+            Descripcion: desc,
+            qty:0
     },
     {
         Id: 6,
-            Nombre: "Jean",
+            Nombre: "Jean calsa",
             Precio: "$700",
             Foto: m3,
             Categoria: "mujer",
-            Descripcion: desc
+            Descripcion: desc,
+            qty:0
     },
     {
         Id: 7,
@@ -65,23 +71,26 @@ export const ListProducts = [
             Precio: "$600",
             Foto: n1,
             Categoria: "nino",
-            Descripcion: desc
+            Descripcion: desc,
+            qty:0
     },
     {
         Id: 8,
-            Nombre: "Campera",
+            Nombre: "Campera canguro",
             Precio: "$1200",
             Foto: n2,
             Categoria: "nino",
-            Descripcion: desc
+            Descripcion: desc,
+            qty:0
     },
     {
         Id: 9,
-            Nombre: "Camisa",
+            Nombre: "Camisa niño",
             Precio: "$400",
             Foto: n3,
             Categoria: "nino",
-            Descripcion: desc
+            Descripcion: desc,
+            qty:0
     },
 ]
 

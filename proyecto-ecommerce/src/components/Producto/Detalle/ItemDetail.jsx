@@ -12,7 +12,7 @@ function ItemDetail({producto}) {
                     <h1 className="ItemDetail_Nombre">{producto.Nombre}</h1>
                     <span className="ItemDetail_Precio">{producto.Precio}</span>
                     <p className="ItemDetail_Descrip">{producto.Descripcion}</p>
-                    <ItemCount/>
+                    <ItemCount item={producto}/>
                 </div>
 
             </div>
