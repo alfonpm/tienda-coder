@@ -12,7 +12,8 @@ import { useState } from 'react';
 function App() {
   const [data, setData] = useState({
     items:[],
-    cantidad:0
+    cantidad:0,
+    cantProd:0
   });
   return (
     <Store.Provider value={[data, setData]}>

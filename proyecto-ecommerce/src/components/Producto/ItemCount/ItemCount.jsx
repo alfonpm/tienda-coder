@@ -1,29 +1,33 @@
 import './ItemCountStyles.css'
 import { useState, useContext } from 'react';
-import { Redirect } from 'react-router-dom'
 import { Store } from '../../../store'
 
 function ItemCount({ item }) {
 
-    const [data, setData] = useContext(Store)
+    const [data, setData] = useContext(Store);
     const [cant, setcantidad] = useState(1);
     const stock = 5;
 
 
-    function OnAdd() {
-        /* 
-        if(data.items.filter( prod => prod.Id === item.Id)){
-            item.qty=cant;
-         
-        }else{
+    function OnAdd(item) {
+        let itemComprado = { ...item };
+        if (data.items.filter(prod => prod.Id === item.Id).length) {
+            let prodEncontrado = data.items.find(prod => prod.Id === item.Id);
+            prodEncontrado.qty = prodEncontrado.qty + cant;
             setData({
-             ...data,
-             cantidad: data.cantidad + cant,
-             items: [...data.items, item],
-         })
+                ...data,
+                cantidad: data.cantidad + cant,
+                items: [...data.items],
+                cantProd:prodEncontrado.qty+cant
+            })
+        } else {
+            itemComprado.qty = cant;
+            setData({
+                ...data,
+                cantidad: data.cantidad + cant,
+                items: [...data.items, itemComprado]
+            })
         }
-        
-        */
 
 
     }
@@ -52,7 +56,7 @@ function ItemCount({ item }) {
                 onClick={Resta} />
             <span className="cantProd text-center">{cant}</span>
             <input type="button" className="mas" value="+" onClick={Suma} />
-            <input type="button" className="agregar" onClick={OnAdd()} value="Agregar" />
+            <input type="button" className="agregar" onClick={() => OnAdd(item)} value="Agregar" />
         </div>
     )
 }
