@@ -24,7 +24,6 @@ function App() {
     <BrowserRouter>
       <Header />
       <Switch>
-     
         <Route exact path="/">
           <ItemListContainer/>
         </Route>

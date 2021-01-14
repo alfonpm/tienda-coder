@@ -34,7 +34,7 @@ const WidgetCart = ({ show, action }) => {
             {
                 data.cantidad == 0 ?
                     <div className="">
-                        <p>No hay items en el carrito</p>
+                        <p className="mensajeCart">No hay items en el carrito</p>
 
                     </div>
                     :

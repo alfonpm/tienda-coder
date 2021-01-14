@@ -9,7 +9,7 @@
 .cartContenedor {
     align-items: center;
     text-align: center;
-    height: 400px;
+    min-height: 400px;
     margin-bottom: 50px;
 }
 
