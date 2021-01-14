@@ -14,7 +14,7 @@ export const ListProducts = [
     {
         Id: 1,
             Nombre: "Camisa roja",
-            Precio: "$500",
+            Precio: 500,
             Foto: h1,
             Categoria: "hombre",
             Descripcion: desc,
@@ -23,7 +23,7 @@ export const ListProducts = [
     {
         Id: 2,
             Nombre: "Camisa azul",
-            Precio: "$600",
+            Precio: 600,
             Foto: h2,
             Categoria: "hombre",
             Descripcion: desc,
@@ -32,7 +32,7 @@ export const ListProducts = [
     {
         Id: 3,
             Nombre: "Jean azul",
-            Precio: "$1000",
+            Precio: 1000,
             Foto: h3,
             Categoria: "hombre",
             Descripcion: desc,
@@ -41,7 +41,7 @@ export const ListProducts = [
     {
         Id: 4,
             Nombre: "Camisa violeta",
-            Precio: "$600",
+            Precio: 600,
             Foto: m1,
             Categoria: "mujer",
             Descripcion: desc,
@@ -50,7 +50,7 @@ export const ListProducts = [
     {
         Id: 5,
             Nombre: "Blusa mostaza",
-            Precio: "$300",
+            Precio: 300,
             Foto: m2,
             Categoria: "mujer",
             Descripcion: desc,
@@ -59,7 +59,7 @@ export const ListProducts = [
     {
         Id: 6,
             Nombre: "Jean calsa",
-            Precio: "$700",
+            Precio: 700,
             Foto: m3,
             Categoria: "mujer",
             Descripcion: desc,
@@ -68,7 +68,7 @@ export const ListProducts = [
     {
         Id: 7,
             Nombre: "Bombacha de campo",
-            Precio: "$600",
+            Precio: 600,
             Foto: n1,
             Categoria: "nino",
             Descripcion: desc,
@@ -77,7 +77,7 @@ export const ListProducts = [
     {
         Id: 8,
             Nombre: "Campera canguro",
-            Precio: "$1200",
+            Precio: 1200,
             Foto: n2,
             Categoria: "nino",
             Descripcion: desc,
@@ -86,7 +86,7 @@ export const ListProducts = [
     {
         Id: 9,
             Nombre: "Camisa niño",
-            Precio: "$400",
+            Precio: 400,
             Foto: n3,
             Categoria: "nino",
             Descripcion: desc,

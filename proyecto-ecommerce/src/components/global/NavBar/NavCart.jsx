@@ -7,6 +7,7 @@ const NavCart = ({action, cant}) => {
     const [data,setData] =useContext(Store);
     
     return (
+        
         <div className="navCart" onClick={action}>
             <BsFillBagFill />
             <span className="cant">{data.cantidad}</span>

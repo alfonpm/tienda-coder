@@ -8,28 +8,33 @@ function ItemCount({ item }) {
     const [cant, setcantidad] = useState(1);
     const stock = 5;
 
-
+    
+    
     function OnAdd(item) {
         let itemComprado = { ...item };
         if (data.items.filter(prod => prod.Id === item.Id).length) {
             let prodEncontrado = data.items.find(prod => prod.Id === item.Id);
             prodEncontrado.qty = prodEncontrado.qty + cant;
+            
             setData({
                 ...data,
                 cantidad: data.cantidad + cant,
                 items: [...data.items],
                 cantProd:prodEncontrado.qty+cant
             })
+            
         } else {
+            
             itemComprado.qty = cant;
             setData({
                 ...data,
                 cantidad: data.cantidad + cant,
                 items: [...data.items, itemComprado]
             })
+            
         }
 
-
+        
     }
 
 

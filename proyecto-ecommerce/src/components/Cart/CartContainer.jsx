@@ -1,6 +1,9 @@
 import './CartStyles.css'
 import { useContext } from 'react'
 import { Store } from '../../store'
+import { Link } from 'react-router-dom'
+
+
 
 function CartContainer() {
 
@@ -12,38 +15,35 @@ function CartContainer() {
         setData({
             ...data,
             cantidad: data.cantidad - prod.qty,
-            items: arrayNuevo
+            items: arrayNuevo,
+            total: data.total - (prod.Precio * prod.qty)
         })
     }
 
 
-    function sumarTotal() {
-        let total = 0;
-        data.items.forEach(element => {
-            total += element.Precio * element.qty;
-            console.log(total)
-        })
-        console.log(total)
-        return total;
-    }
 
     return (
         <div className="cartContenedor container">
             <p className="cartP">Carrito</p>
+
             {
-                data.items.map(
-                    item =>
-                        <div className="contCartPadre">
-                            <div className="contCartProds">
-                                <p className="cadaProd">{item.Nombre} </p>
-                                <span className="cantProdCart">{item.qty}</span>
-                                <input type="button" className="borrarCart" onClick={() => removeItem(item)} value="X" />
+                data.cantidad = 0 ?
+                    <div>
+                        <p>No hay items en el carrito</p>
+                        <Link to="/">HOME</Link>
+                    </div>
+                    :
+                    data.items.map(
+                        item =>
+                            <div className="contCartPadre">
+                                <div className="contCartProds">
+                                    <p className="cadaProd">{item.Nombre} </p>
+                                    <span className="cantProdCart">{item.qty}</span>
+                                    <input type="button" className="borrarCart" onClick={() => removeItem(item)} value="X" />
+                                </div>
+
                             </div>
-
-                        </div>
-                )
-
-
+                    )
             }
 
         </div>

@@ -14,7 +14,7 @@ function ItemDetailContainer() {
             setTimeout(() => {
             const prodSeleccionado = ListProducts.find(producto=> producto.Id==itemid)
             resolve(prodSeleccionado);
-        }, 2000)
+        }, )
     })
 const llamadoProducto = ()=>{
     promesaProducto.then((respuesta)=> setProducto(respuesta))

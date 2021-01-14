@@ -8,7 +8,7 @@ function ItemListContainer() {
     const [producto, setProductos] = useState([]);
 
     const { categ } = useParams();
-    
+
 
     const promesaProd = new Promise((resolve, reject) => {
         setTimeout(() => resolve(ListProducts), 2000)
@@ -16,15 +16,15 @@ function ItemListContainer() {
 
     const llamadoProductos = () => {
         promesaProd.then((respuesta) => {
-            if(categ){
+            if (categ) {
                 const prodCat = respuesta.filter(
-                  (producto)=>  producto.Categoria === categ)
+                    (producto) => producto.Categoria === categ)
                 setProductos(prodCat)
-            } else{
+            } else {
                 setProductos(respuesta)
             }
-                
-            })
+
+        })
     }
 
     useEffect(
@@ -34,7 +34,7 @@ function ItemListContainer() {
         <section className="container" id="ItemDetailContainer">
 
             {
-                producto ?
+                producto.length ?
                     <>
                         <div className="row" id="ItemDetail">
                             {

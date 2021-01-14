@@ -13,13 +13,19 @@ function App() {
   const [data, setData] = useState({
     items:[],
     cantidad:0,
-    cantProd:0
+    total:0,
+    totalAnterior:0
   });
+
+  
+
+
   return (
     <Store.Provider value={[data, setData]}>
     <BrowserRouter>
       <Header />
       <Switch>
+     
         <Route exact path="/">
           <ItemListContainer/>
         </Route>
