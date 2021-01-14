@@ -28,7 +28,7 @@ function CartContainer() {
 
             {
                 data.cantidad = 0 ?
-                    <div>
+                    <div className="">
                         <p>No hay items en el carrito</p>
                         <Link to="/">HOME</Link>
                     </div>
