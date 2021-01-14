@@ -14,7 +14,6 @@ const WidgetCart = ({ show, action }) => {
             ...data,
             cantidad: data.cantidad - prod.qty,
             items: arrayNuevo,
-            total: data.total - (prod.Precio * prod.qty)
         })
         console.log(data.total)
     }
@@ -23,7 +22,6 @@ const WidgetCart = ({ show, action }) => {
         setData({
             items: [],
             cantidad: 0,
-            total: 0
         })
     }
 
