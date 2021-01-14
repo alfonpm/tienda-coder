@@ -14,7 +14,6 @@ function App() {
     items:[],
     cantidad:0,
     total:0,
-    totalAnterior:0
   });
 
   

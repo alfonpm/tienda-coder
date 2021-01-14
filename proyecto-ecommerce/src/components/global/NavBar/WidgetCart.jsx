@@ -27,32 +27,37 @@ const WidgetCart = ({ show, action }) => {
         })
     }
 
-    function sumarTotal() {
-
-        data.items.forEach(element => {
-            console.log(element.Precio)
-            console.log(element.qty)
-            setData({
-                ...data,
-                total: data.total + parseInt(element.Precio) * parseInt(element.qty)
-            })
-        })
-    }
+    
 
     return (
 
         <div className={`widgetCart ${show ? 'open' : 'close'}`}>
             <p className="carrito">Carrito</p>
             {
-                data.items.map(item =>
-                    <div className="contenedorWid">
-                        <p className="produ">{item.Nombre}</p>
-                        <span className="cantIndividual">{item.qty} </span>
-                        <input type="button" className="borrar" onClick={() => removeItem(item)} value="x" />
-                    </div>)
+                data.cantidad == 0 ?
+                    <div className="">
+                        <p>No hay items en el carrito</p>
+
+                    </div>
+                    :
+                    data.items.map(item =>
+                        <div className="contenedorWid">
+                            <p className="produ">{item.Nombre}</p>
+                            <span className="cantIndividual">{item.qty} </span>
+                            <input type="button" className="borrar" onClick={() => removeItem(item)} value="x" />
+                        </div>
+                    )
             }
-            <Link to="/cart" className="verCarrito" onClick={sumarTotal} >ver</Link>
-            <input type="button" className="btnCerrar" onClick={clear} value="Borrar todo" />
+            {
+                data.cantidad >= 1 ? 
+                <div>
+                    <Link to="/cart" className="verCarrito" >ver</Link>
+                     <input type="button" className="btnCerrar" onClick={clear} value="Borrar todo"/>
+                </div>
+                    : 
+                    <Link className="verCarrito" to="/cart">ver</Link>
+            }
+
 
         </div>
     )

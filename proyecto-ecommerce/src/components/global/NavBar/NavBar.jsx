@@ -20,11 +20,10 @@ function NavBar() {
             <li ><Link className="nav-item" to={"/categoria/mujer"}  >DAMA</Link></li>
             <li  ><Link className="nav-item" to={"/categoria/hombre"} >CABALLERO</Link></li>
             <li ><Link className="nav-item" to={"/categoria/nino"} >NIÑO</Link></li>
-            <li className="menu_item"><NavCart action={openWidgetCart} cant="0" /></li>
-            {
-                data.cantidad > 0 ? <WidgetCart show={showWidgetCart} action={openWidgetCart} />
-                    : <WidgetCart/>
-            }
+            <li className="menu_item"><NavCart action={openWidgetCart}  /></li>
+            <WidgetCart show={showWidgetCart} action={openWidgetCart} />
+           
+            
         </ul>
 
 

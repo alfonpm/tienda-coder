@@ -58,3 +58,21 @@
     position: absolute;
     right: 15px;
 }
+
+.carHome{
+text-decoration: none;
+color: black;
+font-size: 25px;
+font-family: 'Bebas Neue', cursive;
+padding: 3px 4px;
+margin: 5px;
+}
+.carHome:hover{
+    text-decoration: none;
+    border: solid #700e0f 2px;
+    color: #700e0f;
+}
+
+.muestraTotal{
+    margin: 20px;
+}

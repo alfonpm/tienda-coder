@@ -9,7 +9,6 @@ function ItemCount({ item }) {
     const stock = 5;
 
     
-    
     function OnAdd(item) {
         let itemComprado = { ...item };
         if (data.items.filter(prod => prod.Id === item.Id).length) {
@@ -19,8 +18,8 @@ function ItemCount({ item }) {
             setData({
                 ...data,
                 cantidad: data.cantidad + cant,
-                items: [...data.items],
-                cantProd:prodEncontrado.qty+cant
+                items: [...data.items]
+                
             })
             
         } else {
