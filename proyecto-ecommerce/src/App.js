@@ -33,7 +33,7 @@ function App() {
         <Route exact path="/categoria/:categ">
         <ItemListContainer/>
         </Route>
-        <Route path="/item/:itemid">
+        <Route path="/item/:id">
           <ItemDetailContainer/>
         </Route>
         <Route path="*">

@@ -5,7 +5,7 @@ function ItemDetail({producto}) {
     return (
         <section className="row ItemDetail_Container">
             <figure className=" col-12 col-md-6 text-right">
-                <img src={producto.Foto} className="img-fluid ItemDetail_img" alt="campera" />
+                <img src={`/assets/${producto.Foto}`} className="img-fluid ItemDetail_img" alt="campera" />
             </figure>
             <div className="col-12 col-md-6 ItemDetail_contDetalles d-flex align-items-center">
                 <div className="ItemDetail_textos">

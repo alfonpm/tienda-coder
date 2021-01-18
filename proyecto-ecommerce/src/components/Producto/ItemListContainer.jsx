@@ -1,30 +1,25 @@
 import { useState, useEffect } from 'react';
-import { ListProducts } from './ListProducts'
-import ItemList from './ItemList'
-import './ItemListStyles.css'
-import { useParams } from 'react-router-dom'
+import { getFirestore } from '../../db';
+import ItemList from './ItemList';
+import './ItemListStyles.css';
+import { useParams } from 'react-router-dom';
 
 function ItemListContainer() {
     const [producto, setProductos] = useState([]);
-
     const { categ } = useParams();
+    const db = getFirestore();
 
-
-    const promesaProd = new Promise((resolve, reject) => {
-        setTimeout(() => resolve(ListProducts), 2000)
-    })
 
     const llamadoProductos = () => {
-        promesaProd.then((respuesta) => {
-            if (categ) {
-                const prodCat = respuesta.filter(
-                    (producto) => producto.Categoria === categ)
-                setProductos(prodCat)
-            } else {
-                setProductos(respuesta)
-            }
-
-        })
+        db.collection('Productos').get()
+            .then(docs => {
+                let arrayProds = []
+                docs.forEach(doc => {
+                    arrayProds.push({ id: doc.id, data: doc.data() })
+                })
+                setProductos(arrayProds)
+            })
+            .catch(e => console.log(e));
     }
 
     useEffect(
@@ -39,16 +34,21 @@ function ItemListContainer() {
                         <div className="row" id="ItemDetail">
                             {
                                 producto.map(producto => (
-                                    <ItemList
-                                        producto={producto}
-                                    />
+                                    
+                                        <ItemList
+                                            nombre={producto.data.Nombre}
+                                            foto={producto.data.Foto}
+                                            precio={producto.data.Precio}
+                                            id={producto.id}
+                                        />
+                                        
                                 ))
                             }
-                        </div>
+                                    </div>
                     </> :
-                    <p className="mensaje">Cargando productos...</p>
+                        <p className="mensaje">Cargando productos...</p>
             }
-        </section>
+                    </section>
     )
 }
 

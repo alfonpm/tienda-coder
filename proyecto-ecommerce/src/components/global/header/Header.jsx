@@ -1,4 +1,4 @@
-import logo from '../../../assets/logo3.jpg'
+import logo from '../../../logo/logo3.jpg'
 import NavBar from '../NavBar/NavBar'
 import { Link } from 'react-router-dom'
 function Header() {
@@ -8,7 +8,8 @@ function Header() {
 
                 <figure className="text-center col-4 col-md-4">
                     <Link to="/"> <img src={logo} alt="logo" className="img-fluid "></img>
-                    </Link> </figure>
+                    </Link> 
+                </figure>
                 <div className="col-12 col-md-8">
                     <NavBar />
                 </div>

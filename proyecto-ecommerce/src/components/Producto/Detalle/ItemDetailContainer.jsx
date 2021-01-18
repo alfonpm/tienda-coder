@@ -1,26 +1,23 @@
 import { useState, useEffect } from 'react';
 import './DetalleStyles.css'
 import ItemDetail from './ItemDetail'
-import {ListProducts} from '../ListProducts'
+import {getFirestore} from '../../../db'
 import {useParams} from 'react-router-dom'
 
 function ItemDetailContainer() {
     const [producto, setProducto] = useState([]);
+    const {id} = useParams();
+    const db=getFirestore();
 
-    const {itemid} = useParams() 
-    
-
-    const promesaProducto = new Promise((resolve, reject) => {       
-            setTimeout(() => {
-            const prodSeleccionado = ListProducts.find(producto=> producto.Id==itemid)
-            resolve(prodSeleccionado);
-        }, )
-    })
-const llamadoProducto = ()=>{
-    promesaProducto.then((respuesta)=> setProducto(respuesta))
-}
     useEffect(() => {
-        llamadoProducto();
+        console.log(id)
+        db.collection('Productos').doc(id).get()
+        .then(doc=>{
+            if(doc.exists){
+                setProducto(doc.data())
+            }
+        })
+        .catch(e=>console.log(e))
     }, []);
 
     
@@ -32,7 +29,7 @@ const llamadoProducto = ()=>{
                         <div className="container-fluid" id="ItemDetail">
                             {
                                     <ItemDetail
-                                        producto={producto}
+                                    producto={producto}
                                     />
                             }
                         </div>
