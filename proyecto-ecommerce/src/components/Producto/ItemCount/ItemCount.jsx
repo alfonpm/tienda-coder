@@ -33,7 +33,7 @@ function ItemCount({ item }) {
             
         }
 
-        
+        console.log(data)
     }
 
 

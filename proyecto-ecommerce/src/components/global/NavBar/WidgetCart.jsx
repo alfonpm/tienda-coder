@@ -25,8 +25,6 @@ const WidgetCart = ({ show, action }) => {
         })
     }
 
-    
-
     return (
 
         <div className={`widgetCart ${show ? 'open' : 'close'}`}>
