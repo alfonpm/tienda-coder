@@ -14,7 +14,8 @@ function ItemDetailContainer() {
         db.collection('Productos').doc(id).get()
         .then(doc=>{
             if(doc.exists){
-                setProducto(doc.data())
+                setProducto({id: doc.id, data: doc.data()})
+                
             }
         })
         .catch(e=>console.log(e))
@@ -24,7 +25,7 @@ function ItemDetailContainer() {
     return (
         <section className="container" id="ItemDetailContainer">
             {
-                producto ?
+                producto.data !=undefined    ?
                 
                         <div className="container-fluid" id="ItemDetail">
                             {

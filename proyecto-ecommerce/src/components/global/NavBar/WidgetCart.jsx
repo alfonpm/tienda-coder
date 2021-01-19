@@ -9,10 +9,10 @@ const WidgetCart = ({ show, action }) => {
 
 
     function removeItem(prod) {
-        const arrayNuevo = data.items.filter(item => item.Id != prod.Id)
+        const arrayNuevo = data.items.filter(item => item.Id != prod.id)
         setData({
             ...data,
-            cantidad: data.cantidad - prod.qty,
+            cantidad: data.cantidad - prod.data.qty,
             items: arrayNuevo,
         })
         console.log(data.total)
@@ -30,7 +30,7 @@ const WidgetCart = ({ show, action }) => {
         <div className={`widgetCart ${show ? 'open' : 'close'}`}>
             <p className="carrito">Carrito</p>
             {
-                data.cantidad == 0 ?
+                data.cantidad === 0 ?
                     <div className="">
                         <p className="mensajeCart">No hay items en el carrito</p>
 
@@ -38,8 +38,8 @@ const WidgetCart = ({ show, action }) => {
                     :
                     data.items.map(item =>
                         <div className="contenedorWid">
-                            <p className="produ">{item.Nombre}</p>
-                            <span className="cantIndividual">{item.qty} </span>
+                            <p className="produ">{item.data.Nombre}</p>
+                            <span className="cantIndividual">{item.data.qty} </span>
                             <input type="button" className="borrar" onClick={() => removeItem(item)} value="x" />
                         </div>
                     )
