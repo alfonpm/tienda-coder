@@ -10,7 +10,7 @@ function ItemDetailContainer() {
     const db=getFirestore();
 
     useEffect(() => {
-        console.log(id)
+        
         db.collection('Productos').doc(id).get()
         .then(doc=>{
             if(doc.exists){
