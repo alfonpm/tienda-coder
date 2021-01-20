@@ -9,9 +9,7 @@ function ItemListContainer() {
     const { categ } = useParams();
     const db = getFirestore();
 
-
     const llamadoProductos = () => {
-
         if (categ === "hombre") {
 
             db.collection('Productos').where("Categoria", "==", "hombre").get()
@@ -59,22 +57,17 @@ function ItemListContainer() {
     }
 }
 
-
-
-
 useEffect(
     () => llamadoProductos(), [categ]
 )
 return (
     <section className="container" id="ItemDetailContainer">
-
         {
             producto.length ?
                 <>
-                    <div className="row" id="ItemDetail">
+                    <div className="row">
                         {
                             producto.map(producto => (
-                                
                                 <ItemList
                                 key={producto.id}
                                     nombre={producto.data.Nombre}
@@ -82,7 +75,6 @@ return (
                                     precio={producto.data.Precio}
                                     id={producto.id}
                                 />
-
                             ))
                         }
                     </div>
