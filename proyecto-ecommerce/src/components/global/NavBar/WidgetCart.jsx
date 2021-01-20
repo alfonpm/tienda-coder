@@ -35,8 +35,7 @@ const WidgetCart = ({ show, action }) => {
                     </div>
                     :
                     data.items.map(item => 
-                        <div  className="contenedorWid">
-                            
+                        <div className="contenedorWid">
                             <p className="produ">{item.data.Nombre}</p>
                             <span className="cantIndividual">{item.data.qty}</span>
                             <input type="button" className="borrar" onClick={() => removeItem(item)} value="x" />
@@ -52,8 +51,6 @@ const WidgetCart = ({ show, action }) => {
                     : 
                     <Link className="verCarrito" to="/cart">ver</Link>
             }
-
-
         </div>
     )
 }
