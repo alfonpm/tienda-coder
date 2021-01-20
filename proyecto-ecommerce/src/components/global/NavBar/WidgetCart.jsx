@@ -7,15 +7,13 @@ import { Store } from '../../../store'
 const WidgetCart = ({ show, action }) => {
     const [data, setData] = useContext(Store);
 
-
     function removeItem(prod) {
-        const arrayNuevo = data.items.filter(item => item.Id != prod.id)
+        const arrayNuevo = data.items.filter(item => item.id !== prod.id)
         setData({
             ...data,
             cantidad: data.cantidad - prod.data.qty,
             items: arrayNuevo,
         })
-        console.log(data.total)
     }
 
     function clear() {
@@ -36,10 +34,11 @@ const WidgetCart = ({ show, action }) => {
 
                     </div>
                     :
-                    data.items.map(item =>
-                        <div className="contenedorWid">
+                    data.items.map(item => 
+                        <div  className="contenedorWid">
+                            
                             <p className="produ">{item.data.Nombre}</p>
-                            <span className="cantIndividual">{item.data.qty} </span>
+                            <span className="cantIndividual">{item.data.qty}</span>
                             <input type="button" className="borrar" onClick={() => removeItem(item)} value="x" />
                         </div>
                     )

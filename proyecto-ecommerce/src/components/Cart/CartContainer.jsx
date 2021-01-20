@@ -11,23 +11,22 @@ function CartContainer() {
 
 
     function removeItem(prod) {
-        const arrayNuevo = data.items.filter(item => item.Id != prod.Id)
+        const arrayNuevo = data.items.filter(item => item.id !== prod.id)
         setData({
             ...data,
-            cantidad: data.cantidad - prod.qty,
+            cantidad: data.cantidad - prod.data.qty,
             items: arrayNuevo,
-            total: data.total - (prod.Precio * prod.qty)
-            
         })
-
+        console.log(data.cantidad)
+        console.log(data.items)
     }
-    
-    const sumaTot = () =>{
-        let total=0;
-        for(let i=0; i<data.items.length; i++){
-            total+=(data.items[i].qty * data.items[i].Precio)
-        } 
-        
+
+    const sumaTot = () => {
+        let total = 0;
+        for (let i = 0; i < data.items.length; i++) {
+            total += parseInt(data.items[i].data.qty) * parseInt(data.items[i].data.Precio)
+        }
+
         return total
     }
 
@@ -36,7 +35,7 @@ function CartContainer() {
             <p className="cartP">Carrito</p>
 
             {
-                data.cantidad == 0 ?
+                data.cantidad === 0 ?
                     <div >
                         <p className="">No hay items en el carrito</p>
                         <Link className="carHome" to="/">HOME</Link>
@@ -46,8 +45,8 @@ function CartContainer() {
                         item =>
                             <div className="contCartPadre">
                                 <div className="contCartProds">
-                                    <p className="cadaProd">{item.Nombre} </p>
-                                    <span className="cantProdCart">{item.qty}</span>
+                                    <p className="cadaProd">{item.data.Nombre} </p>
+                                    <span className="cantProdCart">{item.data.qty}</span>
                                     <input type="button" className="borrarCart" onClick={() => removeItem(item)} value="X" />
 
                                 </div>

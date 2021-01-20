@@ -2,7 +2,7 @@ import './DetalleStyles.css'
 import ItemCount from '../ItemCount/ItemCount'
 
 function ItemDetail({producto}) {
-    console.log(producto)
+    
     return (
         <section className="row ItemDetail_Container">
             <figure className=" col-12 col-md-6 text-right">

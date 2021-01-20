@@ -12,7 +12,7 @@ function ItemListContainer() {
 
     const llamadoProductos = () => {
 
-        if (categ == "hombre") {
+        if (categ === "hombre") {
 
             db.collection('Productos').where("Categoria", "==", "hombre").get()
                 .then(docs => {
@@ -23,7 +23,7 @@ function ItemListContainer() {
                     setProductos(arrayProds)
                 })
                 .catch(e => console.log(e));
-        } else if (categ == "mujer") {
+        } else if (categ === "mujer") {
             db.collection('Productos').where("Categoria", "==", "mujer").get()
                 .then(docs => {
                     let arrayProds = []
@@ -34,7 +34,7 @@ function ItemListContainer() {
                 })
                 .catch(e => console.log(e));
         }
-        else if (categ == "nino") {
+        else if (categ === "nino") {
             db.collection('Productos').where("Categoria", "==", "nino").get()
                 .then(docs => {
                     let arrayProds = []
@@ -74,8 +74,9 @@ return (
                     <div className="row" id="ItemDetail">
                         {
                             producto.map(producto => (
-
+                                
                                 <ItemList
+                                key={producto.id}
                                     nombre={producto.data.Nombre}
                                     foto={producto.data.Foto}
                                     precio={producto.data.Precio}
