@@ -8,16 +8,14 @@ import Error from './components/global/Error'
 import ItemListContainer from './components/Producto/ItemListContainer'
 import {Store} from './store'
 import { useState } from 'react';
+import Checkout from './components/Producto/Checkout/Checkout'
 
 function App() {
   const [data, setData] = useState({
     items:[],
     cantidad:0,
-   
-  });
-
   
-
+  });
 
   return (
     <Store.Provider value={[data, setData]}>
@@ -35,6 +33,9 @@ function App() {
         </Route>
         <Route path="/item/:id">
           <ItemDetailContainer/>
+        </Route>
+        <Route path="/Checkout">
+        <Checkout/>
         </Route>
         <Route path="*">
           <Error />

@@ -1,0 +1,31 @@
+.contFormPago {
+    min-width: 600px;
+    min-height: 450px;
+    text-align: center;
+}
+
+input {
+    display: block;
+    padding: 7px;
+    width: 100%;
+    margin-bottom: 7px;
+}
+
+.contForm {
+    width: 50%;
+}
+
+.btnPagar {
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+}
+
+.tituloCompra {
+    padding: 20px;
+    color: #700e0f;
+    font-family: 'Bebas Neue', cursive;
+}

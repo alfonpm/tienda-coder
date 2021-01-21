@@ -46,6 +46,7 @@ function CartContainer() {
                     )
             }
             <p className="muestraTotal">{`Tu total es: ${sumaTot()}`}</p>
+            <Link to="/Checkout">Finalizar compra</Link>
         </div>
     )
 }
