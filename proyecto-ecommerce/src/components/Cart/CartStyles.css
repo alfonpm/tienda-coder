@@ -76,3 +76,15 @@ margin: 5px;
 .muestraTotal{
     margin: 20px;
 }
+
+.btnFinCompra{
+    padding: 10px;
+    border: solid 2px #700e0f;
+    color: #700e0f;
+    text-decoration: none;
+}
+.btnFinCompra:hover{
+    background-color: #700e0f;
+    color: white;
+    text-decoration: none;
+}

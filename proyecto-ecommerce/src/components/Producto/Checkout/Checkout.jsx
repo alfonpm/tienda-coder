@@ -43,9 +43,9 @@ function Checkout() {
 
         db.collection('ventas').add(compra)
             .then(({ id }) => {
-                console.log(id)
                 setstatusVenta(true);
                 setnumCompra(id);
+                console.log(compra)
             })
             .catch(e => console.log(e));
     }
@@ -53,16 +53,16 @@ function Checkout() {
 
     return (
         <div className="contFormPago container">
-            <div className="contForm mx-auto">
+            <div className="contForm mx-auto row">
                 <h3 className="tituloCompra">FINALIZAR COMPRA</h3>
                 {
                     !statusVenta ?
-                        <form onSubmit={handleSubmit}>
+                        <form onSubmit={handleSubmit} className="col-12">
                             
-                                < input type="text" onChange={handleChange} value={formInfo.nombre} name="nombre" placeholder="Nombre" required />
-                                <input type="text" onChange={handleChange} value={formInfo.apellido} name="apellido" placeholder="Apellido" required />
-                                <input type="email" onChange={handleChange} value={formInfo.email} name="email" placeholder="E-mail" required />
-                                <input type="number" onChange={handleChange} value={formInfo.tel} name="tel" placeholder="Teléfono" required />
+                                <input type="text" onChange={handleChange} value={formInfo.nombre} name="nombre" placeholder="Nombre" required className="inputForm"/>
+                                <input type="text" onChange={handleChange} value={formInfo.apellido} name="apellido" placeholder="Apellido" required className="inputForm"/>
+                                <input type="email" onChange={handleChange} value={formInfo.email} name="email" placeholder="E-mail" required className="inputForm"/>
+                                <input type="number" onChange={handleChange} value={formInfo.tel} name="tel" placeholder="Teléfono" required className="inputForm"/>
                                 <input type="submit" className="btnPagar" value="pagar" />
                             
 

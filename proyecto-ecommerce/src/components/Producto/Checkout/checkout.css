@@ -4,7 +4,7 @@
     text-align: center;
 }
 
-input {
+.inputForm {
     display: block;
     padding: 7px;
     width: 100%;
@@ -16,7 +16,7 @@ input {
 }
 
 .btnPagar {
-    width: 100px;
+   min-width: 100px;
     margin-left: auto;
     margin-right: auto;
     text-transform: uppercase;
