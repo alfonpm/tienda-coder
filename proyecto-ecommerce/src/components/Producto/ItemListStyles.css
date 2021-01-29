@@ -38,12 +38,14 @@ p{
     box-shadow: inset 0 0 1em rgba(251, 81, 81, 0.4), 0 0 1em rgba(251, 81, 81, 0.4);
     border: #700e0f solid 2px;
     color: #700e0f;
+    text-decoration: none !important;
 }
 
 .ver:hover {
     background-color: #700e0f;
     box-shadow: inset 0 0 0 rgba(251, 81, 81, 0.4), 0 0 1.5em rgba(251, 81, 81, 0.6);
     color: white;
+    
 }
 
 .fotoItemList{

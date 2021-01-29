@@ -3,7 +3,7 @@ import './NavStyles.css';
 import {Store} from '../../../store'
 import {useContext} from 'react'
 
-const NavCart = ({action, cant}) => {
+const NavCart = ({action}) => {
     const [data,setData] =useContext(Store);
     
     return (

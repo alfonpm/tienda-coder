@@ -2,7 +2,8 @@ import './NavStyles.css'
 import { Link } from 'react-router-dom'
 import { useContext } from 'react';
 import { Store } from '../../../store'
-
+import BtnCerrar from './BtnCerrar'
+import {BsTrash} from "react-icons/bs"
 
 const WidgetCart = ({ show, action }) => {
     const [data, setData] = useContext(Store);
@@ -26,7 +27,7 @@ const WidgetCart = ({ show, action }) => {
     return (
 
         <div className={`widgetCart ${show ? 'open' : 'close'}`}>
-            <p className="carrito">Carrito</p>
+            
             {
                 data.cantidad === 0 ?
                     <div className="">
@@ -34,21 +35,24 @@ const WidgetCart = ({ show, action }) => {
 
                     </div>
                     :
-                    data.items.map(item => 
-                        <div className="contenedorWid">
-                            <p className="produ">{item.data.Nombre}</p>
-                            <span className="cantIndividual">{item.data.qty}</span>
-                            <input type="button" className="borrar" onClick={() => removeItem(item)} value="x" />
+                    data.items.map(item =>
+                        <div className="contenedorWid row">
+                            <figure className="figWid col-4">
+                                <img className="fotoWidget" src={`/assets/${item.data.Foto}`} alt=""></img>
+                            </figure>
+                            <p className="produ col-4">{item.data.Nombre}</p>
+                            <span className="cantIndividual col-2">{item.data.qty}</span>
+                            <button className="borrar col-2" onClick={() => removeItem(item)}><BtnCerrar /></button>
                         </div>
                     )
             }
             {
-                data.cantidad >= 1 ? 
-                <div>
-                    <Link to="/cart" className="verCarrito" >ver</Link>
-                     <input type="button" className="btnCerrar" onClick={clear} value="Borrar todo"/>
-                </div>
-                    : 
+                data.cantidad >= 1 ?
+                    <div>
+                        <Link to="/cart" className="verCarrito" >ver</Link>
+                        <button type="button" className="btnCerrar" onClick={clear}><BsTrash/></button>
+                    </div>
+                    :
                     <Link className="verCarrito" to="/cart">ver</Link>
             }
         </div>

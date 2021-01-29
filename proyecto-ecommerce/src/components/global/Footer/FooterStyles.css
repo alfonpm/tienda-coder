@@ -1,10 +1,35 @@
 Footer {
     background-color: #700e0f;
     margin-top: auto;
-    height: 50px;
+    min-height: 50px;
+    max-height: fit-content;
 }
 .pFooter{
     color: blanchedalmond;
     padding-left: 30px;
     letter-spacing: 2px;
+    text-align: center;
+}
+
+
+
+.telefono, .mail,.instagram {
+    background-color: white;
+    color: #700e0f;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+    border-radius: 3px;
+}
+.spnTelefono {
+    color: white;
+    
+}
+.mailA{
+    text-decoration: none;
+    color: white;
+}
+.mailA:hover{
+    text-decoration: none;
+    color: white;
 }

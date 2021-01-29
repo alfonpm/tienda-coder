@@ -2,6 +2,7 @@ import './CartStyles.css'
 import { useContext } from 'react'
 import { Store } from '../../store'
 import { Link } from 'react-router-dom'
+import {BsTrash} from "react-icons/bs"
 
 function CartContainer() {
 
@@ -26,27 +27,40 @@ function CartContainer() {
 
     return (
         <div className="cartContenedor container">
-            <p className="cartP">Carrito</p>
+            <p className="cartTitulo">Carrito</p>
             {
                 data.cantidad === 0 ?
                     <div >
                         <p className="">No hay items en el carrito</p>
-                        <Link className="carHome" to="/">HOME</Link>
+
                     </div>
                     :
                     data.items.map(
                         item =>
                             <div className="contCartPadre">
-                                <div className="contCartProds">
-                                    <p className="cadaProd">{item.data.Nombre} </p>
-                                    <span className="cantProdCart">{item.data.qty}</span>
-                                    <input type="button" className="borrarCart" onClick={() => removeItem(item)} value="X" />
+                                <div className="contCartProds row">
+                                    <figure className="figureCart col-12 col-md-2">
+                                        <img className="fotoCart" src={`/assets/${item.data.Foto}`} alt=""></img>
+                                    </figure>
+                                    <p className="NombreProd col-12 col-md-4">{item.data.Nombre} </p>
+                                    <span className="cantProdCart col-12 col-md-2">{item.data.qty}</span>
+                                    <span className="precio col-12 col-md-2">$ {item.data.Precio}</span>
+                                    <button className="borrarCart col-12 col-md-2" onClick={() => removeItem(item)}><BsTrash className="btnBorrarCart" /></button>
                                 </div>
                             </div>
                     )
             }
-            <p className="muestraTotal">{`Tu total es: ${sumaTot()}`}</p>
-            <Link className="btnFinCompra" to="/Checkout">FINALIZAR COMPRA</Link>
+            {
+                data.cantidad === 0 ?
+                    <Link className="carHome" to="/">HOME</Link>
+                    :
+                    <aside className="detalleCompra">
+                        <p className="muestraTotal">{`Tu total es: ${sumaTot()}`}</p>
+                        <Link className="btnFinCompra" to="/Checkout">FINALIZAR COMPRA</Link>
+                    </aside>
+            }
+            
+
         </div>
     )
 }
