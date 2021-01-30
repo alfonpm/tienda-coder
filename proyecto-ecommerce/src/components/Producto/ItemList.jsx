@@ -11,7 +11,7 @@ function ItemList({ nombre, foto, precio, id }) {
                 </figure>
                 <div className="text-center infoBox">
                     <h1>{nombre}</h1>
-                    <p>${precio}</p>
+                    <p className="itemPrecio">${precio}</p>
                     <Link to={`/item/${id}`} className="ver">ver</Link>
                 </div>
             </div>

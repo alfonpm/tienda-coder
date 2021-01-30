@@ -12,6 +12,7 @@ function Checkout() {
     const [data, setData] = useContext(Store);
     const [numCompra, setnumCompra] = useState('');
     const [statusVenta, setstatusVenta] = useState(false);
+    const [error, setError] = useState(false);
     const [formInfo, setformInfo] = useState({
         nombre: '',
         apellido: '',
@@ -43,15 +44,12 @@ function Checkout() {
 
         let mail = document.getElementById("email").value;
         let mail2 = document.getElementById("email2").value;
-        console.log(mail);
-        console.log(mail2);
 
         if (verifyPsw(mail, mail2)) {
             db.collection('ventas').add(compra)
                 .then(({ id }) => {
                     setstatusVenta(true);
                     setnumCompra(id);
-                    console.log(compra)
 
                 })
                 .catch(e => console.log(e));
@@ -59,6 +57,8 @@ function Checkout() {
                 items: [],
                 cantidad: 0,
             })
+        }else{
+            setError(true);
         }
 
     }
@@ -78,11 +78,12 @@ function Checkout() {
                 <h3 className="tituloCompra">FINALIZAR COMPRA</h3>
                 {
                     !statusVenta ?
-                        <form onSubmit={handleSubmit} className="col-12">
+                        <form onSubmit={handleSubmit} className=" col-12">
 
                             <input type="text" onChange={handleChange} value={formInfo.nombre} name="nombre" placeholder="Nombre" required className="inputForm" />
                             <input type="text" onChange={handleChange} value={formInfo.apellido} name="apellido" placeholder="Apellido" required className="inputForm" />
                             <input type="email" onChange={handleChange} id="email" value={formInfo.email} name="email" placeholder="E-mail" required className="inputForm" />
+                            
                             <input type="email" name="email2" id="email2" placeholder="E-mail" required className="inputForm" />
                             <input type="number" onChange={handleChange} value={formInfo.tel} name="tel" placeholder="Teléfono" required className="inputForm" />
                             <input type="submit" id="btnPagar" className="btnPagar" value="PAGAR" />
@@ -90,6 +91,9 @@ function Checkout() {
 
                         </form >
                         : <p>La compra se realizo correctamente, tu numero de orden es: {numCompra}</p>
+                }
+                {
+                    error===true? <p className=" mError">Los mails deben conincidir</p> :null
                 }
             </div>
         </div>

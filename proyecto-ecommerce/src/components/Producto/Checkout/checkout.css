@@ -1,45 +1,65 @@
 .contFormPago {
-    min-width: 800px;
-    min-height: 450px;
-    text-align: center;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .inputForm {
-    display: block;
-    padding: 5px;
-    width: 100%;
-    margin-bottom: 7px;
+  display: block;
+  padding: 10px;
+  width: 70%;
+  margin-bottom: 10px;
+  border-left: solid 1px transparent;
+  border-right: solid 1px transparent;
+  border-top: solid 1px transparent;
+  border-bottom: solid 1px grey;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+::placeholder {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
+  letter-spacing: 3px;
 }
 
 .contForm {
-    width: 50%;
+  width: 70%;
 }
 
-/*
 .btnPagar {
-   min-width: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    text-transform: uppercase;
-    font-family: 'Bebas Neue', cursive;
-    font-size: 20px;
-}*/
+  min-width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
+}
 
 .tituloCompra {
-    padding: 20px;
-    color: #700e0f;
-    font-family: 'Bebas Neue', cursive;
-    
+  padding: 20px;
+  color: #700e0f;
+  font-family: 'Bebas Neue', cursive;
+  margin-right: auto;
+  margin-left: auto;
 }
-
 
 :root {
   --light: rgba(255, 255, 255, 0.835);
   --dark: #700e0f;
   --text: #700e0f;
-};
+}
 
-  
+;
+.mError {
+  padding: 20px !important;
+  text-align: center !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  color: #700e0f !important;
+}
+
+/*
 .btnPagar {
   display: block;
   cursor: pointer;
@@ -83,4 +103,4 @@
     }
   }
 
-  
+  */
