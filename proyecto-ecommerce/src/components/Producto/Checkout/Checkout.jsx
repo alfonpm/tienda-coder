@@ -63,7 +63,7 @@ function Checkout() {
                                 <input type="text" onChange={handleChange} value={formInfo.apellido} name="apellido" placeholder="Apellido" required className="inputForm"/>
                                 <input type="email" onChange={handleChange} value={formInfo.email} name="email" placeholder="E-mail" required className="inputForm"/>
                                 <input type="number" onChange={handleChange} value={formInfo.tel} name="tel" placeholder="Teléfono" required className="inputForm"/>
-                                <input type="submit" className="btnPagar" value="pagar" />
+                                <input type="submit" className="btnPagar" value="PAGAR" />
                             
 
                         </form >

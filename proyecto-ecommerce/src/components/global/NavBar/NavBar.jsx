@@ -1,7 +1,7 @@
 import './NavStyles.css';
-import NavCart from './NavCart'
+import NavCart from './Widget/NavCart'
 import { Link } from 'react-router-dom'
-import WidgetCart from './WidgetCart'
+import WidgetCart from './Widget/WidgetCart'
 import { useState } from 'react'
 import { useContext } from 'react'
 import { Store } from '../../../store'

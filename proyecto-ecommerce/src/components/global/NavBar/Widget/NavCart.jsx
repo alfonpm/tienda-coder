@@ -1,6 +1,6 @@
 import {BsFillBagFill} from "react-icons/bs";
-import './NavStyles.css';
-import {Store} from '../../../store'
+import './WidgetStyles.css';
+import {Store} from '../../../../store'
 import {useContext} from 'react'
 
 const NavCart = ({action}) => {

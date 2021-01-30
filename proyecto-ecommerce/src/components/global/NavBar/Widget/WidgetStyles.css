@@ -1,0 +1,143 @@
+.close {
+    display: none;
+}
+
+.open {
+    display: block;
+}
+
+.navCart {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.cant {
+    position: absolute;
+    bottom: 10px;
+}
+
+.widgetCart {
+    background-color: white;
+    border: solid 0 1px 1px 1px black;
+    position: absolute;
+    right:8px;
+    top:65px;
+    height: fit-content;
+    width: 310px;
+    text-align: center;
+    z-index: 100;
+    box-shadow: 3px 3px 4px grey;
+    border: solid 2px grey;
+    overflow: hidden;
+    border-radius:6px 6px 6px 6px;
+}
+
+/* el top del widget en celular tiene que medir 90  240x426,
+    en escritorio 65px*/
+.btnCerrar {
+    background-color: transparent;
+    border: none;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    margin-bottom: 9px;
+    margin-right: 15px;
+}
+
+.btnCerrar:hover {
+    color: gray;
+    transform: scale(1.2, 1.2);
+}
+
+.carrito {
+    color: antiquewhite;
+    color: #700e0f;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    font-family: 'Bebas Neue', cursive;
+    z-index: 20;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+.verCarrito {
+    display: inline-block;
+    border: none;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    margin-bottom: 11px;
+
+    width: 50px;
+    height: 30px;
+    margin: 15px;
+    text-decoration: none;
+    z-index: 15;
+    color: black;
+    padding: auto 0px;
+}
+
+.verCarrito:hover {
+    text-decoration: none;
+    transform: scale(1.2, 1.2);
+    color: gray;
+}
+
+.produ {
+    margin: auto 0px;
+    color: white;
+    display: inline;
+    color: #700e0f;
+    
+}
+
+.cantIndividual {
+    margin: auto 0px;
+    color: white;
+    display: inline;
+    font-size: 15px;
+    color: #700e0f;
+    
+}
+
+.contenedorWid{
+    padding: 0 15px;
+    border-bottom: 1px solid gray;
+    
+    height: fit-content;
+    
+}
+.borrar{
+    display: inline;
+    border: solid 1px transparent;
+    background-color: transparent;   
+    color: #700e0f;
+    
+}
+.borrar:hover{
+    color: #ce0c0f;
+} 
+.mensajeCart{
+    color:#700e0f;
+    padding: 20px;
+    margin: auto auto;
+    font-size: 20px;
+}
+
+.fotoWidget{
+    display: inline;
+    width: 100%;
+    height: 80px;
+    padding: 4px 0px;
+}
+
+.figWid{
+    width: 100%;
+    height: 100%;
+    margin: auto 0px !important;
+}
+
+.widgetBtn{
+    display: flex;
+    justify-content: space-around;
+}

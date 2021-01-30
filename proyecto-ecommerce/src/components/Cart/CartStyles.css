@@ -47,36 +47,21 @@
     margin: auto 0px;
 }
 
-.carHome {
-    text-decoration: none;
-    color: black;
-    font-size: 25px;
-    font-family: 'Bebas Neue', cursive;
-    padding: 3px 4px;
-    margin: 5px;
-}
 
-.carHome:hover {
-    text-decoration: none;
-    border: solid #700e0f 2px;
-    color: #700e0f;
-}
+
+
 
 .muestraTotal {
     margin: 20px;
+    padding: 20px;
+    font-size: 20px;
 }
 
-.btnFinCompra {
-    padding: 10px;
-    border: solid 2px #700e0f;
-    color: #700e0f;
-    text-decoration: none;
-}
-
-.btnFinCompra:hover {
-    background-color: #700e0f;
-    color: white;
-    text-decoration: none;
+.detalleCompra{
+    width: 100%;
+    height: 100%;
+    margin: 20px;
+    padding: 50px;
 }
 
 .precio {
@@ -101,8 +86,93 @@
     background-color: transparent;
     
 }
-
+.borrarCart:hover{
+    transform: scale(1.2, 1.2);
+}
 .btnBorrarCart{
     width: 22px;
     height: 25px;
+}
+
+.btn {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    position: relative;
+    position: absolute;
+    
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  
+  .text {
+    padding: 0 50px;
+    visibility: hidden;
+  }
+  
+  .flip-front,
+  .flip-back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform-style: flat;
+    transform-style: flat;
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    -o-transition: -o-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .flip-front {
+    color:  #700e0f;
+    border: 2px solid #700e0f;
+    background-color: transparent;
+    -webkit-transform: rotateX(0deg) translateZ(25px);
+    -ms-transform: rotateX(0deg) translateZ(25px);
+    -o-transform: rotateX(0deg) translateZ(25px);
+    transform: rotateX(0deg) translateZ(25px);
+  }
+  
+  .flip-back {
+    color: #fff;
+    background-color: #700e0f;
+    border: 2px solid #700e0f;
+    -webkit-transform: rotateX(90deg) translateZ(25px);
+    -ms-transform: rotateX(90deg) translateZ(25px);
+    -o-transform: rotateX(90deg) translateZ(25px);
+    transform: rotateX(90deg) translateZ(25px);
+  }
+  
+  .btn:hover .flip-front {
+    -webkit-transform: rotateX(-90deg) translateZ(25px);
+    -ms-transform: rotateX(-90deg) translateZ(25px);
+    -o-transform: rotateX(-90deg) translateZ(25px);
+    transform: rotateX(-90deg) translateZ(25px);
+  }
+  
+  .btn:hover .flip-back {
+    -webkit-transform: rotateX(0deg) translateZ(25px);
+    -ms-transform: rotateX(0deg) translateZ(25px);
+    -o-transform: rotateX(0deg) translateZ(25px);
+    transform: rotateX(0deg) translateZ(25px);
+  }
+  
+  .carHome {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-family: 'Bebas Neue', cursive;
+    padding: 5px 10px;
+    margin: 5px;
+    
+}
+
+  .carHome:hover {
+    text-decoration: none;
+    border: solid #700e0f 2px;
+    color: #700e0f;
+    
 }

@@ -2,7 +2,9 @@ import './CartStyles.css'
 import { useContext } from 'react'
 import { Store } from '../../store'
 import { Link } from 'react-router-dom'
-import {BsTrash} from "react-icons/bs"
+import { BsTrash } from "react-icons/bs"
+import { TiHomeOutline } from "react-icons/ti";
+
 
 function CartContainer() {
 
@@ -55,11 +57,15 @@ function CartContainer() {
                     <Link className="carHome" to="/">HOME</Link>
                     :
                     <aside className="detalleCompra">
-                        <p className="muestraTotal">{`Tu total es: ${sumaTot()}`}</p>
-                        <Link className="btnFinCompra" to="/Checkout">FINALIZAR COMPRA</Link>
+                        <p className="muestraTotal">{`Tu total es: $${sumaTot()}`}</p>
+                        <Link className="btn" to="/Checkout">
+                            <span class="text">Text</span>
+                            <span class="flip-front">FINALIZAR</span>
+                            <span class="flip-back">COMPRA</span>
+                        </Link>
                     </aside>
             }
-            
+
 
         </div>
     )

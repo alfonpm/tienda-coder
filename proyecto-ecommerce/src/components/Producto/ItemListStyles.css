@@ -1,25 +1,33 @@
-.contGalria{
+.contGalria {
     display: flex;
 }
 
-h1{
+h1 {
     font-size: 18px;
     letter-spacing: 2px;
     font-family: 'Bebas Neue', cursive;
 }
-p{
+
+p {
     font-size: 16px;
     letter-spacing: 1px;
     font-family: 'Bebas Neue', cursive;
 }
 
-#galeria{
+#galeria {
     margin: 100px;
 }
 
-
-.art{
+.art {
     margin: 20px;
+}
+
+.itemCard {
+    border: solid 1px rgb(185, 185, 185);
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+    
 
 }
 
@@ -28,27 +36,45 @@ p{
 .ver {
     text-align: center;
     font-family: 'Bebas Neue', cursive;
-    color: rgba(255, 255, 255, 1);
+    color: #700e0f;
     background: none;
-    border-radius: 0;
-    padding: 2px 20px;
+    border-radius: 6px;
+    padding: 4px 25px;
     letter-spacing: 2px;
+    font-size: large;
     transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+   
     margin: 1em;
     box-shadow: inset 0 0 1em rgba(251, 81, 81, 0.4), 0 0 1em rgba(251, 81, 81, 0.4);
     border: #700e0f solid 2px;
-    color: #700e0f;
-    text-decoration: none !important;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
 }
 
 .ver:hover {
     background-color: #700e0f;
-    box-shadow: inset 0 0 0 rgba(251, 81, 81, 0.4), 0 0 1.5em rgba(251, 81, 81, 0.6);
+    box-shadow: inset 0 0 1em rgba(251, 81, 81, 0.4), 0 0 1em rgba(251, 81, 81, 0.4);
     color: white;
-    
+    text-decoration: none !important;
 }
 
-.fotoItemList{
-    width: 350px !important;
-height: 450px !important;
+.ver:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( 120deg, transparent,white, transparent);
+    transition: all 650ms;
+}
+
+.ver:hover:before {
+    left: 100%;
+}
+
+.fotoItemList {
+    width: 330px !important;
+    height: 430px !important;
 }

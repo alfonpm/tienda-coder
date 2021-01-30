@@ -33,3 +33,16 @@ Footer {
     text-decoration: none;
     color: white;
 }
+
+.instagram:hover{
+    transform: scale(1.2, 1.2);
+}
+.facebook:hover{
+    transform: scale(1.2, 1.2);
+}
+.mail:hover{
+    transform: scale(1.2, 1.2);
+}
+.telefono:hover{
+    transform: scale(1.2, 1.2);
+}

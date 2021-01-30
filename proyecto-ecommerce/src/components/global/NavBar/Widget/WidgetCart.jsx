@@ -1,9 +1,11 @@
-import './NavStyles.css'
+import './WidgetStyles.css'
 import { Link } from 'react-router-dom'
 import { useContext } from 'react';
-import { Store } from '../../../store'
+import { Store } from '../../../../store'
 import BtnCerrar from './BtnCerrar'
 import {BsTrash} from "react-icons/bs"
+import {FiShoppingCart} from "react-icons/fi"
+
 
 const WidgetCart = ({ show, action }) => {
     const [data, setData] = useContext(Store);
@@ -48,12 +50,12 @@ const WidgetCart = ({ show, action }) => {
             }
             {
                 data.cantidad >= 1 ?
-                    <div>
-                        <Link to="/cart" className="verCarrito" >ver</Link>
+                    <div className="widgetBtn">
+                        <Link to="/cart" className="verCarrito" ><FiShoppingCart/></Link>
                         <button type="button" className="btnCerrar" onClick={clear}><BsTrash/></button>
                     </div>
                     :
-                    <Link className="verCarrito" to="/cart">ver</Link>
+                    <Link className="verCarrito" to="/cart"><FiShoppingCart/></Link>
             }
         </div>
     )
