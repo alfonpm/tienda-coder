@@ -5,12 +5,12 @@ import {ImPhone} from "react-icons/im";
 import {ImEnvelop} from "react-icons/im";
 function Footer() {
     return (
-        <footer className="d-flex align-items-center row">
-            <p className="pFooter col-12 col-md-4 ">Todos los derechos reservados</p>
-            <a className="col-1" href="https://www.instagram.com/lapampa.uruguay/" target="_blank">
+        <footer className="d-flex align-items-center row mx-auto">
+            <p className="pFooter d-none d-md-block col-md-4 ">Todos los derechos reservados</p>
+            <a className="col-1" href="https://www.instagram.com/lapampa.uruguay/">
                 <ImInstagram className="instagram" />
             </a>
-            <a className="col-12 col-md-1 " href="https://www.facebook.com/lapampauruguay" target="_blank">
+            <a className="col-12 col-md-1 " href="https://www.facebook.com/lapampauruguay">
                 <ImFacebook2 className="instagram" />
             </a>
             <span className=" spnTelefono col-12 col-md-2 ">

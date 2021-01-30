@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { Store } from '../../store'
 import { Link } from 'react-router-dom'
 import { BsTrash } from "react-icons/bs"
-import { TiHomeOutline } from "react-icons/ti";
+
 
 
 function CartContainer() {
@@ -39,7 +39,7 @@ function CartContainer() {
                     :
                     data.items.map(
                         item =>
-                            <div className="contCartPadre">
+                            <div key={item.id} className="contCartPadre">
                                 <div className="contCartProds row">
                                     <figure className="figureCart col-12 col-md-2">
                                         <img className="fotoCart" src={`/assets/${item.data.Foto}`} alt=""></img>
@@ -59,9 +59,9 @@ function CartContainer() {
                     <aside className="detalleCompra">
                         <p className="muestraTotal">{`Tu total es: $${sumaTot()}`}</p>
                         <Link className="btn" to="/Checkout">
-                            <span class="text">Text</span>
-                            <span class="flip-front">FINALIZAR</span>
-                            <span class="flip-back">COMPRA</span>
+                            <span className="text">Text</span>
+                            <span className="flip-front">FINALIZAR</span>
+                            <span className="flip-back">COMPRA</span>
                         </Link>
                     </aside>
             }

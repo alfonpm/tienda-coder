@@ -38,7 +38,7 @@ const WidgetCart = ({ show, action }) => {
                     </div>
                     :
                     data.items.map(item =>
-                        <div className="contenedorWid row">
+                        <div key={item.id} className="contenedorWid row">
                             <figure className="figWid col-4">
                                 <img className="fotoWidget" src={`/assets/${item.data.Foto}`} alt=""></img>
                             </figure>

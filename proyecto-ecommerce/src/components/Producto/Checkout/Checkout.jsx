@@ -41,15 +41,36 @@ function Checkout() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        db.collection('ventas').add(compra)
-            .then(({ id }) => {
-                setstatusVenta(true);
-                setnumCompra(id);
-                console.log(compra)
+        let mail = document.getElementById("email").value;
+        let mail2 = document.getElementById("email2").value;
+        console.log(mail);
+        console.log(mail2);
+
+        if (verifyPsw(mail, mail2)) {
+            db.collection('ventas').add(compra)
+                .then(({ id }) => {
+                    setstatusVenta(true);
+                    setnumCompra(id);
+                    console.log(compra)
+
+                })
+                .catch(e => console.log(e));
+            setData({
+                items: [],
+                cantidad: 0,
             })
-            .catch(e => console.log(e));
+        }
+
     }
 
+
+
+    function verifyPsw(mail, mail2) {
+        if (mail === mail2) {
+            return true
+        }
+        return false
+    }
 
     return (
         <div className="contFormPago container">
@@ -58,13 +79,14 @@ function Checkout() {
                 {
                     !statusVenta ?
                         <form onSubmit={handleSubmit} className="col-12">
-                            
-                                <input type="text" onChange={handleChange} value={formInfo.nombre} name="nombre" placeholder="Nombre" required className="inputForm"/>
-                                <input type="text" onChange={handleChange} value={formInfo.apellido} name="apellido" placeholder="Apellido" required className="inputForm"/>
-                                <input type="email" onChange={handleChange} value={formInfo.email} name="email" placeholder="E-mail" required className="inputForm"/>
-                                <input type="number" onChange={handleChange} value={formInfo.tel} name="tel" placeholder="Teléfono" required className="inputForm"/>
-                                <input type="submit" className="btnPagar" value="PAGAR" />
-                            
+
+                            <input type="text" onChange={handleChange} value={formInfo.nombre} name="nombre" placeholder="Nombre" required className="inputForm" />
+                            <input type="text" onChange={handleChange} value={formInfo.apellido} name="apellido" placeholder="Apellido" required className="inputForm" />
+                            <input type="email" onChange={handleChange} id="email" value={formInfo.email} name="email" placeholder="E-mail" required className="inputForm" />
+                            <input type="email" name="email2" id="email2" placeholder="E-mail" required className="inputForm" />
+                            <input type="number" onChange={handleChange} value={formInfo.tel} name="tel" placeholder="Teléfono" required className="inputForm" />
+                            <input type="submit" id="btnPagar" className="btnPagar" value="PAGAR" />
+                            <p id="mensaje"></p>
 
                         </form >
                         : <p>La compra se realizo correctamente, tu numero de orden es: {numCompra}</p>

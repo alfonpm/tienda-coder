@@ -6,7 +6,7 @@ function Header() {
         <header className="container-fluid cabezal mb-5">
             <nav className="row">
 
-                <figure className="text-center col-4 col-md-4">
+                <figure className="text-center col-12 col-md-4">
                     <Link to="/"> <img src={logo} alt="logo" className="img-fluid "></img>
                     </Link> 
                 </figure>

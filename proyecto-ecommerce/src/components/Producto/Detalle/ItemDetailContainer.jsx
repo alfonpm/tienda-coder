@@ -19,7 +19,8 @@ function ItemDetailContainer() {
                 }
             })
             .catch(e => console.log(e))
-    }, [id]);
+    }, [db,id]);
+
 
 
     return (
