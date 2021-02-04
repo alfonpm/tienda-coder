@@ -4,7 +4,7 @@ import {Store} from '../../../../store'
 import {useContext} from 'react'
 
 const NavCart = ({action}) => {
-    const [data,setData] =useContext(Store);
+    const [data] =useContext(Store);
     
     return (
         

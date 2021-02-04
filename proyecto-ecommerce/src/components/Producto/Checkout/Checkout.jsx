@@ -93,7 +93,7 @@ function Checkout() {
                         : <p>La compra se realizo correctamente, tu numero de orden es: {numCompra}</p>
                 }
                 {
-                    error===true? <p className=" mError">Los mails deben conincidir</p> :null
+                    error===true? <p className=" mError">Los correos deben conincidir</p> :null
                 }
             </div>
         </div>

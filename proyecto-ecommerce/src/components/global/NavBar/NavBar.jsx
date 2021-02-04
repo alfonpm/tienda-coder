@@ -9,7 +9,7 @@ import { Store } from '../../../store'
 
 
 function NavBar() {
-    const [data, setData] = useContext(Store);
+    const [data] = useContext(Store);
     const [showWidgetCart, setShowWidgetCart] = useState(false);
 
     const openWidgetCart = () => {

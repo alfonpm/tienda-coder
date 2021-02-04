@@ -14,7 +14,7 @@ function Footer() {
                 <ImFacebook2 className="instagram" />
             </a>
             <span className=" spnTelefono col-12 col-md-2 ">
-             <ImPhone className="telefono"/> +59846334085
+             <ImPhone className="telefono"/> +598 - 46334085
             </span>
             <a  href="mailto:lapampauruguay@gmail.com" className="col-12 col-md-4 mailA ">
                 <ImEnvelop className="mail"/> lapampauruguay@gmail.com

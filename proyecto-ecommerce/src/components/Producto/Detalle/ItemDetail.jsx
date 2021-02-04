@@ -11,14 +11,11 @@ function ItemDetail({producto}) {
             <div className="col-12 col-md-6 ItemDetail_contDetalles d-flex align-items-center">
                 <div className="ItemDetail_textos">
                     <h1 className="ItemDetail_Nombre">{producto.data.Nombre}</h1>
-                    <span className="ItemDetail_Precio">{producto.data.Precio}</span>
+                    <span className="ItemDetail_Precio">${producto.data.Precio}</span>
                     <p className="ItemDetail_Descrip">{producto.data.Descripcion}</p>
                     <ItemCount item={producto} />
-                    
                 </div>
-
             </div>
-
         </section>
     )
 }
