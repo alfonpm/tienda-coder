@@ -19,7 +19,7 @@ function CartContainer() {
         })
     }
 
-    const sumaTot = () => {
+    const sumaTotal = () => {
         let total = 0;
         for (let i = 0; i < data.items.length; i++) {
             total += parseInt(data.items[i].data.qty) * parseInt(data.items[i].data.Precio)
@@ -57,7 +57,7 @@ function CartContainer() {
                     <Link className="carHome" to="/">HOME</Link>
                     :
                     <aside className="detalleCompra">
-                        <p className="muestraTotal">{`Tu total es: $${sumaTot()}`}</p>
+                        <p className="muestraTotal">{`Tu total es: $${sumaTotal()}`}</p>
                         <Link className="btn" to="/Checkout">
                             <span className="text">Text</span>
                             <span className="flip-front">FINALIZAR</span>

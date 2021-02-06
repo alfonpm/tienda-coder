@@ -21,13 +21,11 @@ li:hover {
     text-align: center;
     text-decoration: none;
     transition: all 300ms;
-    
 }
 
 .nav-item:hover {
     text-decoration: none;
     color: black !important;
-
 }
 
 .menu_item {
@@ -36,13 +34,14 @@ li:hover {
     color: rgb(243, 223, 223) !important;
     transition: all 500ms;
 }
-.menu-item:hover{
+
+.menu-item:hover {
     transform: scale(1.2, 1.2) !important;
 }
+
 nav {
     align-items: center;
 }
-
 
 .icono {
     color: white;
@@ -51,7 +50,6 @@ nav {
 .icono:hover {
     color: black;
 }
-
 
 .main_nav {
     width: 80%;
@@ -67,4 +65,3 @@ nav {
     padding-bottom: auto;
     padding-top: 10px;
 }
-

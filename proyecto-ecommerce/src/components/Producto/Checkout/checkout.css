@@ -59,48 +59,79 @@
   color: #700e0f !important;
 }
 
-/*
-.btnPagar {
-  display: block;
-  cursor: pointer;
-  outline: none;
-  border: none #700e0f;
-  background-color: var(--light);
-  width: 200px;
-  height: 50px;
-  border-radius: 30px;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--text);
-  background-size: 100% 100%;
-  box-shadow: 0 0 0 7px var(--light) inset;
-  margin-bottom: 15px;
-  }
-  
-  .btnPagar:hover {
-    background-image: linear-gradient(
-      145deg,
-      transparent 10%,
-      var(--dark) 10% 20%,
-      transparent 20% 30%,
-      var(--dark) 30% 40%,
-      transparent 40% 50%,
-      var(--dark) 50% 60%,
-      transparent 60% 70%,
-      var(--dark) 70% 80%,
-      transparent 80% 90%,
-      var(--dark) 90% 100%
-    );
-    animation: background 3s linear infinite;
-  }
-  
-  @keyframes background {
-    0% {
-      background-position: 0 0;
-    }
-    100% {
-      background-position: 400px 0;
-    }
-  }
+.compraCorrecta {
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  */
+.checkIcon {
+  font-size: 50px;
+  color: green;
+}
+
+.compraCorrecta {
+  display: inline-block;
+  width: 100%;
+  height: 350px;
+}
+
+.mensaje1 {
+  font-size: 30px;
+}
+
+.mensaje2 {
+  font-size: 25px;
+}
+
+.mensaje3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/*BOTON PAGAR*/
+
+.btnPagar {
+  font-weight: 600;
+  color: #382b22;
+  text-transform: uppercase;
+  background: #fbefef;
+  border: 2px solid #ff5153;
+  border-radius: 0.75em;
+  transform-style: preserve-3d;
+  letter-spacing: 3px;
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+.btnPagar::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translate3d(0, 0.75em, -1em);
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+.btnPagar:hover {
+  background: #a12424;
+  transform: translate(0, 0.25em);
+}
+
+.btnPagar:hover::before {
+  box-shadow: 0 0 0 2px #be2d2d, 0 0.5em 0 0 #bd403c;
+  transform: translate3d(0, 0.5em, -1em);
+}
+
+.btnPagar:active {
+  background: #e64242;
+  transform: translate(0em, 0.75em);
+}
+
+.btnPagar:active::before {
+  box-shadow: 0 0 0 2px #722424, 0 0 #831e1b;
+  transform: translate3d(0, 0, -1em);
+}

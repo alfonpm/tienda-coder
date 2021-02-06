@@ -1,10 +1,8 @@
-import {BsX} from "react-icons/bs"
+import { BsX } from "react-icons/bs"
 
 const BtnCerrar = () => {
     return (
-        
-            <BsX/>
-        
+        <BsX />
     )
 }
 

@@ -1,30 +1,26 @@
-
-.contGalria{
+.contGalria {
     display: flex;
 }
 
-h1{
+h1 {
     font-size: 18px;
     letter-spacing: 2px;
     font-family: 'Bebas Neue', cursive;
 }
-p{
+
+p {
     font-size: 16px;
     letter-spacing: 1px;
     font-family: 'Bebas Neue', cursive;
 }
 
-#galeria{
+#galeria {
     margin: 100px;
 }
 
-
-.art{
+.art {
     margin: 20px;
-
 }
-
-
 
 .ver {
     text-align: center;

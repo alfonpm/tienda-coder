@@ -3,6 +3,7 @@ import { ImInstagram } from "react-icons/im";
 import {ImFacebook2} from "react-icons/im";
 import {ImPhone} from "react-icons/im";
 import {ImEnvelop} from "react-icons/im";
+
 function Footer() {
     return (
         <footer className="d-flex align-items-center row mx-auto">
@@ -21,7 +22,6 @@ function Footer() {
             </a>
         </footer>
     )
-
 }
 
 export default Footer;

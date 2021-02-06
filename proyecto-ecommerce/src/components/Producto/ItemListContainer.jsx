@@ -9,8 +9,6 @@ function ItemListContainer() {
     const { categ } = useParams();
     const db = getFirestore();
 
-
-
     const llamadoProductos = () => {
         if (categ) {
             db.collection('Productos').where("Categoria", "==", `${categ}`).get()
@@ -36,9 +34,9 @@ function ItemListContainer() {
     }
 
     useEffect(
-        () => llamadoProductos(), 
+        () => llamadoProductos(),
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    [categ])
+        [categ])
     return (
         <section className="container" id="ItemDetailContainer">
             {

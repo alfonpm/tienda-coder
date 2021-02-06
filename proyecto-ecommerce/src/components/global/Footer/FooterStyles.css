@@ -4,16 +4,15 @@ Footer {
     min-height: 50px;
     max-height: fit-content;
 }
-.pFooter{
+
+.pFooter {
     color: blanchedalmond;
     padding-left: 30px;
     letter-spacing: 2px;
     text-align: center;
 }
 
-
-
-.telefono, .mail,.instagram {
+.telefono, .mail, .instagram {
     background-color: white;
     color: #700e0f;
     width: 30px;
@@ -21,28 +20,33 @@ Footer {
     padding: 3px;
     border-radius: 3px;
 }
+
 .spnTelefono {
     color: white;
-    
 }
-.mailA{
-    text-decoration: none;
-    color: white;
-}
-.mailA:hover{
+
+.mailA {
     text-decoration: none;
     color: white;
 }
 
-.instagram:hover{
+.mailA:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.instagram:hover {
     transform: scale(1.2, 1.2);
 }
-.facebook:hover{
+
+.facebook:hover {
     transform: scale(1.2, 1.2);
 }
-.mail:hover{
+
+.mail:hover {
     transform: scale(1.2, 1.2);
 }
-.telefono:hover{
+
+.telefono:hover {
     transform: scale(1.2, 1.2);
 }

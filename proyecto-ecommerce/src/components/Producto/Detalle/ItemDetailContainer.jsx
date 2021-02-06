@@ -15,13 +15,10 @@ function ItemDetailContainer() {
             .then(doc => {
                 if (doc.exists) {
                     setProducto({ id: doc.id, data: doc.data() })
-
                 }
             })
             .catch(e => console.log(e))
-    }, [db,id]);
-
-
+    }, [db, id]);
 
     return (
         <section className="container" id="ItemDetailContainer">
@@ -40,7 +37,6 @@ function ItemDetailContainer() {
             }
         </section>
     )
-
 }
 
 export default ItemDetailContainer;

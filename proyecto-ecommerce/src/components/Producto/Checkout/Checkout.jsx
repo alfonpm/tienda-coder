@@ -4,8 +4,7 @@ import { Store } from '../../../store';
 import { getFirestore } from '../../../db';
 import firebase from 'firebase/app';
 import './checkout.css';
-
-
+import { FcApproval } from "react-icons/fc";
 
 function Checkout() {
     const db = getFirestore()
@@ -57,10 +56,9 @@ function Checkout() {
                 items: [],
                 cantidad: 0,
             })
-        }else{
+        } else {
             setError(true);
         }
-
     }
 
 
@@ -83,18 +81,24 @@ function Checkout() {
                             <input type="text" onChange={handleChange} value={formInfo.nombre} name="nombre" placeholder="Nombre" required className="inputForm" />
                             <input type="text" onChange={handleChange} value={formInfo.apellido} name="apellido" placeholder="Apellido" required className="inputForm" />
                             <input type="email" onChange={handleChange} id="email" value={formInfo.email} name="email" placeholder="E-mail" required className="inputForm" />
-                            
+
                             <input type="email" name="email2" id="email2" placeholder="E-mail" required className="inputForm" />
                             <input type="number" onChange={handleChange} value={formInfo.tel} name="tel" placeholder="Teléfono" required className="inputForm" />
-                            <input type="submit" id="btnPagar" className="btnPagar" value="PAGAR" />
+                            <input type="submit" id="btnPagar" className="btnPagar" value="COMPRAR" />
                             <p id="mensaje"></p>
-
+                            {
+                                error === true ? <p className=" mError">Los correos deben conincidir</p> : null
+                            }
                         </form >
-                        : <p>La compra se realizo correctamente, tu numero de orden es: {numCompra}</p>
+                        :
+                        <div className="compraCorrecta">
+                            <FcApproval className="checkIcon" />
+                            <p className="mensaje1">Gracias! Recibimos tu pedido</p>
+                            <p className="mensaje2"> el codigo de tu orden es: {numCompra}</p>
+                            <p className="mensaje3">En las próximas 48 horas nos comunicaremos contigo para el arreglo del pago y el envío</p>
+                        </div>
                 }
-                {
-                    error===true? <p className=" mError">Los correos deben conincidir</p> :null
-                }
+
             </div>
         </div>
 

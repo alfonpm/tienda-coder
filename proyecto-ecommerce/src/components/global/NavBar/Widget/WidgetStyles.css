@@ -22,8 +22,8 @@
     background-color: white;
     border: solid 0 1px 1px 1px black;
     position: absolute;
-    right:8px;
-    top:65px;
+    right: 8px;
+    top: 65px;
     height: fit-content;
     width: 310px;
     text-align: center;
@@ -32,12 +32,17 @@
     border: solid 2px grey;
     border-top: solid 2px transparent;
     overflow: hidden;
-    border-radius:6px 6px 6px 6px;
-    
+    border-radius: 6px 6px 6px 6px;
 }
 
-/* el top del widget en celular tiene que medir 90  240x426,
-    en escritorio 65px*/
+@media(max-width: 575px) {
+    .widgetCart {
+        position: absolute;
+        right: 2px;
+        top: 100px;
+    }
+}
+
 .btnCerrar {
     background-color: transparent;
     border: none;
@@ -69,7 +74,6 @@
     font-family: 'Bebas Neue', cursive;
     font-size: 20px;
     margin-bottom: 11px;
-
     width: 50px;
     height: 30px;
     margin: 15px;
@@ -90,7 +94,6 @@
     color: white;
     display: inline;
     color: #700e0f;
-    
 }
 
 .cantIndividual {
@@ -99,47 +102,46 @@
     display: inline;
     font-size: 15px;
     color: #700e0f;
-    
 }
 
-.contenedorWid{
+.contenedorWid {
     padding: 0 15px;
     border-bottom: 1px solid gray;
-    
     height: fit-content;
-    
 }
-.borrar{
+
+.borrar {
     display: inline;
     border: solid 1px transparent;
-    background-color: transparent;   
+    background-color: transparent;
     color: #700e0f;
-    
 }
-.borrar:hover{
+
+.borrar:hover {
     color: #ce0c0f;
-} 
-.mensajeCart{
-    color:#700e0f;
+}
+
+.mensajeCart {
+    color: #700e0f;
     padding: 20px;
     margin: auto auto;
     font-size: 20px;
 }
 
-.fotoWidget{
+.fotoWidget {
     display: inline;
     width: 100%;
     height: 80px;
     padding: 4px 0px;
 }
 
-.figWid{
+.figWid {
     width: 100%;
     height: 100%;
     margin: auto 0px !important;
 }
 
-.widgetBtn{
+.widgetBtn {
     display: flex;
     justify-content: space-around;
 }

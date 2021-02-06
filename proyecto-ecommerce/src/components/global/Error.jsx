@@ -2,7 +2,7 @@ import './ErrorStyles.css'
 
 function Error(){
     return(
-        <p className="ErrorP">No existe</p>
+        <p className="ErrorP">Lo sentimos, lo que buscas no existe.</p>
     )
 }
 

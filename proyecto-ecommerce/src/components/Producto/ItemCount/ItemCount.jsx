@@ -8,7 +8,6 @@ function ItemCount({ item }) {
     const [cant, setcantidad] = useState(1);
     const stock = 5;
 
-
     function OnAdd(item) {
         let itemComprado = { ...item };
         if (data.items.filter(prod => prod.id === item.id).length !== 0) {
@@ -29,7 +28,6 @@ function ItemCount({ item }) {
         }
     }
 
-
     const Resta = () => {
         if (cant > 1) {
             setcantidad(cant - 1);
@@ -44,12 +42,11 @@ function ItemCount({ item }) {
         }
     }
 
-
     return (
         <div className="canti mx-auto">
             <input type="button" className="menos" value="-"
-                disabled={!cant ? 'disabled' : null}
                 disabled={cant === 1 ? 'disabled' : null}
+                // disabled={!cant ? 'disabled' : null}
                 onClick={Resta} />
             <span className="cantProd text-center">{cant}</span>
             <input type="button" className="mas" value="+" onClick={Suma} />

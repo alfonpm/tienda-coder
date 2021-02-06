@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 import { useContext } from 'react';
 import { Store } from '../../../../store'
 import BtnCerrar from './BtnCerrar'
-import {BsTrash} from "react-icons/bs"
-import {FiShoppingCart} from "react-icons/fi"
+import { BsTrash } from "react-icons/bs"
+import { FiShoppingCart } from "react-icons/fi"
 
 
 const WidgetCart = ({ show, action }) => {
@@ -29,7 +29,6 @@ const WidgetCart = ({ show, action }) => {
     return (
 
         <div className={`widgetCart ${show ? 'open' : 'close'}`}>
-            
             {
                 data.cantidad === 0 ?
                     <div className="">
@@ -51,11 +50,11 @@ const WidgetCart = ({ show, action }) => {
             {
                 data.cantidad >= 1 ?
                     <div className="widgetBtn">
-                        <Link to="/cart" className="verCarrito" ><FiShoppingCart/></Link>
-                        <button type="button" className="btnCerrar" onClick={clear}><BsTrash/></button>
+                        <Link to="/cart" className="verCarrito" ><FiShoppingCart /></Link>
+                        <button type="button" className="btnCerrar" onClick={clear}><BsTrash /></button>
                     </div>
                     :
-                    <Link className="verCarrito" to="/cart"><FiShoppingCart/></Link>
+                    <Link className="verCarrito" to="/cart"><FiShoppingCart /></Link>
             }
         </div>
     )

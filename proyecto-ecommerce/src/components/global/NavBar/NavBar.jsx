@@ -6,8 +6,6 @@ import { useState } from 'react'
 import { useContext } from 'react'
 import { Store } from '../../../store'
 
-
-
 function NavBar() {
     const [data] = useContext(Store);
     const [showWidgetCart, setShowWidgetCart] = useState(false);
@@ -20,11 +18,9 @@ function NavBar() {
             <li ><Link className="nav-item" to={"/categoria/mujer"}  >DAMA</Link></li>
             <li  ><Link className="nav-item" to={"/categoria/hombre"} >CABALLERO</Link></li>
             <li ><Link className="nav-item" to={"/categoria/nino"} >NIÑO</Link></li>
-            <li className="menu_item"><NavCart action={openWidgetCart}  /></li>
+            <li className="menu_item"><NavCart action={openWidgetCart} /></li>
             <WidgetCart show={showWidgetCart} action={openWidgetCart} />
         </ul>
-
-
     )
 }
 

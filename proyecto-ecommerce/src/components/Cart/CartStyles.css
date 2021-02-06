@@ -4,7 +4,6 @@
     color: #700e0f;
     min-height: auto;
     padding: 20px 0;
-    border-bottom: solid 2px gray;
 }
 
 .cartContenedor {
@@ -16,9 +15,8 @@
 }
 
 .contCartPadre {
-    
-    border-bottom: 2px grey solid;
-    width: 60%;
+    border: 1px grey solid;
+    width: 80%;
     margin: 10px auto;
     overflow: hidden;
     padding: 30px;
@@ -35,6 +33,7 @@
     font-size: 25px;
     color: #700e0f;
     margin: auto 0px;
+    
 }
 
 .fotoCart {
@@ -46,10 +45,6 @@
     color: #700e0f;
     margin: auto 0px;
 }
-
-
-
-
 
 .muestraTotal {
     margin: 20px;
@@ -78,6 +73,7 @@
     width: 100%;
     height: 100%;
     margin: auto 0px;
+    
 }
 
 .borrarCart {
@@ -176,3 +172,4 @@
     color: #700e0f;
     
 }
+
